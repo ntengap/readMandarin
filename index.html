@@ -68,11 +68,16 @@ h1{font-size:22px;margin:4px 0 2px;text-align:center}
 .qsc{text-align:center;color:var(--soft);margin-top:14px;font-size:15px}
 .tabs button.tg.on{background:var(--ok)}
 .hid2{display:none}
-.cl .hz{color:var(--acc);font-weight:700}.t4 button{font-size:13px;padding:10px 4px}.emo{font-size:26px;text-align:center;letter-spacing:2px;line-height:1.5;margin-top:8px;word-break:break-all}.hint{text-align:center;color:var(--soft);font-size:14px;margin:4px 0 8px}.tools{flex-wrap:wrap}.tools button.act{background:var(--acc);color:#fff}.lo button{font-size:13px!important;padding:8px 12px!important}</style>
+.cl .hz{color:var(--acc);font-weight:700}.t4 button{font-size:13px;padding:10px 4px}.emo{font-size:26px;text-align:center;letter-spacing:2px;line-height:1.5;margin-top:8px;word-break:break-all}.hint{text-align:center;color:var(--soft);font-size:14px;margin:4px 0 8px}.tools{flex-wrap:wrap}.tools button.act{background:var(--acc);color:#fff}.lo button{font-size:13px!important;padding:8px 12px!important}.inst{background:var(--acc);color:#fff;border-radius:22px;padding:9px 14px;font-size:14px;font-weight:700;box-shadow:0 1px 3px #0003}
+.ov{position:fixed;inset:0;background:#0006;display:flex;align-items:flex-end;justify-content:center;z-index:9}
+.ov>div{background:var(--card);border-radius:24px 24px 0 0;padding:22px 20px calc(24px + env(safe-area-inset-bottom));max-width:560px;width:100%;text-align:center;font-size:18px;line-height:1.9}
+.ov b{font-size:22px;display:block;margin-bottom:6px}.ov button{margin-top:12px;background:var(--acc);color:#fff;border-radius:24px;padding:12px 32px;font-size:16px;font-weight:700}
+</style>
 </head>
 <body>
 <header>
   <div class="streak" id="streak">🔥 0</div>
+  <button class="inst hid" id="inst">⬇ Installer</button>
   <div class="nav"><button class="ic" id="prev">‹</button><span id="pos"></span><button class="ic" id="next">›</button></div>
 </header>
 <div class="tabs t4"><button id="tabR" class="on">读 Lire</button><button id="tabB">造 Construire</button><button id="tabQ">考 Quiz</button><button id="tabP">配 Paires</button></div>
@@ -495,6 +500,27 @@ function chime(){try{
     g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.15,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.3);
     o.connect(g);g.connect(a.destination);o.start(t);o.stop(t+.32)});
 }catch(e){}}
+// ---------- Installer ----------
+let dp=null;
+const isStd=()=>(window.matchMedia&&matchMedia("(display-mode: standalone)").matches)||navigator.standalone===true;
+const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+function instShow(){$("inst").classList.toggle("hid",isStd())}
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();dp=e;instShow()});
+window.addEventListener("appinstalled",()=>{dp=null;$("inst").classList.add("hid")});
+function instHelp(){
+  const o=document.createElement("div");o.className="ov";
+  o.innerHTML='<div><b>⬇ Installer l\'app</b>'+(isIOS
+    ?'1️⃣ Touche <span style="font-size:26px">⬆️</span> (Partager) dans Safari<br>2️⃣ « Sur l\'écran d\'accueil » ➕'
+    :'1️⃣ Touche <span style="font-size:26px">⋮</span> (menu du navigateur)<br>2️⃣ « Installer l\'application » ou « Ajouter à l\'écran d\'accueil »')
+    +'<br><button>OK</button></div>';
+  o.onclick=e=>{if(e.target===o||e.target.tagName==="BUTTON")o.remove()};
+  document.body.appendChild(o);
+}
+$("inst").onclick=async()=>{
+  if(dp){dp.prompt();try{await dp.userChoice}catch(e){}dp=null;instShow()}
+  else instHelp();
+};
+instShow();
 if(window.speechSynthesis)speechSynthesis.onvoiceschanged=()=>{};
 render();
 if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
