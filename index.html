@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5efe6">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>读 Lecture du jour</title>
+<style>
+:root{--bg:#f5efe6;--ink:#3b2a1e;--soft:#8a7564;--card:#fffaf2;--acc:#b5532a;--ok:#4f7a4a}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"PingFang SC","Noto Sans SC",sans-serif;min-height:100vh;padding:env(safe-area-inset-top) 16px calc(24px + env(safe-area-inset-bottom));max-width:560px;margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.streak{font-weight:700}
+.nav{display:flex;align-items:center;gap:10px;color:var(--soft);font-size:15px}
+button{font:inherit;border:0;cursor:pointer;color:var(--ink)}
+.ic{background:var(--card);border-radius:50%;width:42px;height:42px;font-size:18px;box-shadow:0 1px 3px #0002}
+h1{font-size:22px;margin:4px 0 2px;text-align:center}
+.date{text-align:center;color:var(--soft);font-size:14px;margin-bottom:14px}
+.sent{background:var(--card);border-radius:20px;padding:18px 12px 14px;margin-bottom:12px;box-shadow:0 1px 4px #0001}
+.line{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 2px}
+.w{display:flex;flex-direction:column;align-items:center;padding:2px 6px;border-radius:10px;cursor:pointer}
+.w:active,.w.on{background:#b5532a22}
+.py{font-size:14px;color:var(--acc);height:19px}
+.hide-py .py{visibility:hidden}
+.hz{font-size:38px;line-height:1.15}
+.p{font-size:38px;line-height:1.15;align-self:flex-end;padding:0 2px}
+.fr{text-align:center;color:var(--soft);margin-top:10px;font-size:15px;min-height:20px}
+.row{display:flex;justify-content:center;gap:10px;margin-top:8px}
+.sm{background:var(--bg);border-radius:20px;padding:8px 14px;font-size:14px}
+.tip{position:sticky;bottom:12px;background:var(--ink);color:#fff;border-radius:16px;padding:12px 16px;text-align:center;margin-top:10px;display:none}
+.tip b{font-size:26px;display:block}
+.tools{display:flex;gap:10px;justify-content:center;margin:14px 0}
+.tools button{background:var(--card);padding:10px 16px;border-radius:24px;box-shadow:0 1px 3px #0002;font-size:15px}
+.tools button.act{background:var(--acc);color:#fff}
+.done{display:block;width:100%;background:var(--acc);color:#fff;padding:16px;border-radius:28px;font-size:18px;font-weight:700;margin-top:6px}
+.done.ok{background:var(--ok)}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:16px}
+.dots i{width:12px;height:12px;border-radius:50%;background:#0002}
+.dots i.on{background:var(--ok)}
+.dots i.today{outline:2px solid var(--acc);outline-offset:2px}
+
+.tabs{display:flex;gap:8px;background:var(--card);padding:5px;border-radius:26px;box-shadow:0 1px 3px #0002;margin-bottom:8px}
+.tabs button{flex:1;padding:10px;border-radius:22px;background:transparent;font-weight:700;font-size:15px;color:var(--soft)}
+.tabs button.on{background:var(--acc);color:#fff}
+.hid{display:none!important}
+.big{background:var(--card);border-radius:22px;padding:22px 10px 16px;box-shadow:0 1px 4px #0001;text-align:center;margin:8px 0 12px}
+.big .line{gap:2px 0}
+.big .hz{font-size:46px}.big .py{font-size:15px}
+.big .tr{color:var(--soft);font-size:16px;margin-top:10px;min-height:22px}
+.grp{margin:12px 0 4px;font-size:13px;color:var(--soft);display:flex;gap:6px;align-items:baseline}
+.grp b{font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--card);border-radius:16px;padding:8px 12px;box-shadow:0 1px 3px #0002;text-align:center;min-width:64px}
+.chip .c1{font-size:26px;line-height:1.1}.chip .c2{font-size:12px;color:var(--soft)}
+.chip.on{outline:3px solid var(--acc)}
+.cs .chip.on{background:#b5532a18}.cv .chip.on{outline-color:var(--ok)}.co .chip.on{outline-color:#2f6f9f}
+.brow{display:flex;gap:10px;margin-top:16px}
+.brow button{flex:1;padding:14px;border-radius:26px;font-size:16px;font-weight:700;background:var(--acc);color:#fff}
+.brow button.alt{background:var(--card);color:var(--ink);box-shadow:0 1px 3px #0002}
+
+.ans{min-height:84px;border:2px dashed #0003;border-radius:18px;padding:8px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin:10px 0}
+.ans:empty::after{content:"…";color:var(--soft);font-size:28px}
+.qmsg{text-align:center;min-height:52px;margin:12px 0 0;font-size:17px;color:var(--ink)}
+.qmsg.ok{color:var(--ok);font-weight:700;font-size:22px}
+.qsc{text-align:center;color:var(--soft);margin-top:14px;font-size:15px}
+.tabs button.tg.on{background:var(--ok)}
+.hid2{display:none}
+.cl .hz{color:var(--acc);font-weight:700}.t4 button{font-size:13px;padding:10px 4px}.emo{font-size:26px;text-align:center;letter-spacing:2px;line-height:1.5;margin-top:8px;word-break:break-all}.hint{text-align:center;color:var(--soft);font-size:14px;margin:4px 0 8px}.tools{flex-wrap:wrap}.tools button.act{background:var(--acc);color:#fff}.lo button{font-size:13px!important;padding:8px 12px!important}</style>
+</head>
+<body>
+<header>
+  <div class="streak" id="streak">🔥 0</div>
+  <div class="nav"><button class="ic" id="prev">‹</button><span id="pos"></span><button class="ic" id="next">›</button></div>
+</header>
+<div class="tabs t4"><button id="tabR" class="on">读 Lire</button><button id="tabB">造 Construire</button><button id="tabQ">考 Quiz</button><button id="tabP">配 Paires</button></div>
+<div id="vRead">
+<h1 id="title"></h1>
+<div class="date" id="date"></div>
+<main id="text"></main>
+<div class="tip" id="tip"></div>
+<div class="tools">
+  <button id="all">🔊 Tout lire</button>
+  <button id="lis">🎧 Écoute</button>
+  <button id="tpy" class="act">拼 Pinyin</button>
+  <button id="tfr">🇫🇷 Traduction</button>
+</div>
+<div class="tools lo"><button id="lslow" class="act">🐢 Lent d'abord</button><button id="lfr">🇫🇷 + traduction</button><button id="lall">∞ Tous les textes</button></div>
+<button class="done" id="done">✓ J'ai lu aujourd'hui</button>
+<div class="dots" id="dots"></div>
+</div>
+<div id="vBuild" class="hid">
+  <div class="big"><div class="line" id="bline"></div><div class="tr" id="btr"></div><div class="emo" id="bemo"></div></div>
+  <div class="tabs t4"><button id="mA" class="on">吃 Action</button><button id="mE">很 État</button><button id="mC">三 Compter</button><button id="nG" class="tg">不 Non</button></div>
+  <div id="gS"><div class="grp"><b>我</b> Qui ?</div><div class="chips cs" id="cS"></div></div>
+  <div id="gV"><div class="grp"><b>吃</b> Action</div><div class="chips cv" id="cV"></div></div>
+  <div id="gO"><div class="grp"><b id="lOh">饭</b> <span id="lOt">Quoi ?</span></div><div class="chips co" id="cO"></div></div>
+  <div id="gN" class="hid"><div class="grp"><b>三</b> Unités</div><div class="chips" id="cN"></div><div class="grp"><b>十</b> Dizaines</div><div class="chips" id="cT"></div></div>
+  <div class="brow"><button id="bsay">🔊 Écouter</button><button class="alt" id="brnd">🎲 Au hasard</button></div>
+</div>
+<div id="vQuiz" class="hid">
+  <div class="big"><div class="tr" id="qfr" style="font-size:22px;color:var(--ink);margin:0"></div></div>
+  <div class="ans" id="qans"></div>
+  <div class="chips" id="qpool" style="justify-content:center"></div>
+  <div class="qmsg" id="qmsg"></div>
+  <div class="brow"><button class="alt" id="qreset">↺ Recommencer</button><button id="qnext">Suivant ›</button></div>
+  <div class="qsc" id="qsc"></div>
+</div>
+<div id="vPair" class="hid">
+  <div class="hint">1 nom = 1 classificateur : 苹果 → 个苹果</div>
+  <div class="big"><div class="emo" id="pemo" style="font-size:64px;margin:0"></div><div class="line" id="pline"></div><div class="tr" id="pfr"></div></div>
+  <div class="chips" id="popts" style="justify-content:center"></div>
+  <div class="qmsg" id="pmsg"></div>
+  <div class="brow"><button id="pnext">Suivant ›</button></div>
+  <div class="qsc" id="psc"></div>
+</div>
+
+<script>
+// "hanzi|pinyin|français" séparés par des espaces ; sans « | » = ponctuation
+const T=[
+{t:"Mon chat",s:[
+["我|wǒ|je 有|yǒu|avoir 一|yì|un 只|zhī|(classificateur : animaux) 猫|māo|chat 。","J'ai un chat."],
+["它|tā|il (animal) 很|hěn|très 小|xiǎo|petit 。","Il est petit."],
+["它|tā|il (animal) 喜欢|xǐhuan|aimer 喝|hē|boire 水|shuǐ|eau 。","Il aime boire de l'eau."]]},
+{t:"Le matin",s:[
+["早上|zǎoshang|le matin 好|hǎo|bon ！","Bonjour (le matin) !"],
+["我|wǒ|je 喝|hē|boire 一|yì|un 杯|bēi|(classificateur : verre) 水|shuǐ|eau 。","Je bois un verre d'eau."],
+["我|wǒ|je 吃|chī|manger 一|yí|un 个|gè|(classificateur général) 苹果|píngguǒ|pomme 。","Je mange une pomme."]]},
+{t:"Mes livres",s:[
+["我|wǒ|je 有|yǒu|avoir 三|sān|trois 本|běn|(classificateur : livres) 书|shū|livre 。","J'ai trois livres."],
+["这|zhè|ce 本|běn|(classificateur : livres) 书|shū|livre 很|hěn|très 好|hǎo|bon 。","Ce livre est très bien."],
+["我|wǒ|je 每天|měitiān|chaque jour 看|kàn|lire 书|shū|livre 。","Je lis chaque jour."]]},
+{t:"Ma maison",s:[
+["这|zhè|ceci 是|shì|être 我|wǒ|je 的|de|(possessif) 家|jiā|maison 。","Voici ma maison."],
+["我|wǒ|je 家|jiā|famille 有|yǒu|avoir 四|sì|quatre 个|gè|(classificateur général) 人|rén|personne 。","Dans ma famille, il y a quatre personnes."],
+["我|wǒ|je 爱|ài|aimer 我|wǒ|mon 家|jiā|famille 。","J'aime ma famille."]]},
+{t:"À l'école",s:[
+["我|wǒ|je 在|zài|être à 学校|xuéxiào|école 。","Je suis à l'école."],
+["我|wǒ|je 有|yǒu|avoir 两|liǎng|deux 支|zhī|(classificateur : stylos) 笔|bǐ|stylo 。","J'ai deux stylos."],
+["我|wǒ|je 有|yǒu|avoir 一|yì|une 张|zhāng|(classificateur : feuilles) 纸|zhǐ|papier 。","J'ai une feuille de papier."]]},
+{t:"Aujourd'hui",s:[
+["今天|jīntiān|aujourd'hui 天气|tiānqì|temps 很|hěn|très 好|hǎo|bon 。","Aujourd'hui il fait très beau."],
+["我|wǒ|je 去|qù|aller 学校|xuéxiào|école 。","Je vais à l'école."],
+["你|nǐ|tu 呢|ne|et (toi) ？","Et toi ?"]]},
+{t:"Au marché",s:[
+["你好|nǐ hǎo|bonjour ！","Bonjour !"],
+["我|wǒ|je 要|yào|vouloir 五|wǔ|cinq 个|gè|(classificateur général) 苹果|píngguǒ|pomme 。","Je voudrais cinq pommes."],
+["很|hěn|très 好|hǎo|bien ，谢谢|xièxie|merci ！","Très bien, merci !"]]},
+{t:"Mon ami",s:[
+["他|tā|il 是|shì|être 我|wǒ|je 的|de|(possessif) 朋友|péngyou|ami 。","C'est mon ami."],
+["他|tā|il 叫|jiào|s'appeler 小明|Xiǎo Míng|Xiao Ming 。","Il s'appelle Xiao Ming."],
+["我们|wǒmen|nous 都|dōu|tous 喜欢|xǐhuan|aimer 猫|māo|chat 。","Nous aimons tous les chats."]]},
+{t:"Le soir",s:[
+["晚上|wǎnshang|le soir 我|wǒ|je 在|zài|être à 家|jiā|maison 。","Le soir, je suis à la maison."],
+["我|wǒ|je 喝|hē|boire 一|yì|un 杯|bēi|(classificateur : verre) 茶|chá|thé 。","Je bois une tasse de thé."],
+["晚安|wǎn'ān|bonne nuit ！","Bonne nuit !"]]},
+{t:"Deux chats",s:[
+["我|wǒ|je 家|jiā|maison 有|yǒu|avoir 一|yì|un 只|zhī|(classificateur : animaux) 大|dà|grand 猫|māo|chat 和|hé|et 一|yì|un 只|zhī|(classificateur : animaux) 小|xiǎo|petit 猫|māo|chat 。","Chez moi, il y a un grand chat et un petit chat."],
+["大|dà|grand 猫|māo|chat 喜欢|xǐhuan|aimer 睡觉|shuìjiào|dormir 。","Le grand chat aime dormir."],
+["小|xiǎo|petit 猫|māo|chat 喜欢|xǐhuan|aimer 玩|wán|jouer 。","Le petit chat aime jouer."]]}
+];
+
+const K="lecture-mandarin-v1";
+let S;try{S=JSON.parse(localStorage.getItem(K))||{}}catch(e){S={}}
+S.done=S.done||{};
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}};
+const dayKey=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const dayNum=d=>Math.floor((Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()))/864e5);
+const today=new Date();let off=0;
+const $=id=>document.getElementById(id);
+let showFr=false,showPy=true;
+
+function cur(){const d=new Date(today);d.setDate(d.getDate()+off);return d}
+function streak(){let n=0;const d=new Date(today);if(!S.done[dayKey(d)])d.setDate(d.getDate()-1);
+  while(S.done[dayKey(d)]){n++;d.setDate(d.getDate()-1)}return n}
+
+function speak(txt,rate){
+  if(!window.speechSynthesis)return;
+  if(L.on)stopL();
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(txt);u.lang="zh-CN";u.rate=rate||.8;
+  const v=speechSynthesis.getVoices().find(v=>/zh[-_]CN/i.test(v.lang))||speechSynthesis.getVoices().find(v=>/^zh/i.test(v.lang));
+  if(v)u.voice=v;speechSynthesis.speak(u);
+}
+const plain=s=>s.split(" ").map(t=>t.split("|")[0]).join("");
+
+function render(){
+  const d=cur(),k=dayKey(d),i=curIdx(),x=T[i];
+  $("title").textContent=x.t;
+  $("date").textContent=d.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"});
+  $("pos").textContent=off===0?"Aujourd'hui":(off<0?"−"+(-off)+" j":"+"+off+" j");
+  $("next").style.visibility=off>=0?"hidden":"visible";
+  $("tip").style.display="none";
+  const box=$("text");box.innerHTML="";box.className=showPy?"":"hide-py";
+  x.s.forEach(([raw,fr])=>{
+    const c=document.createElement("div");c.className="sent";
+    const l=document.createElement("div");l.className="line";
+    raw.split(" ").forEach(t=>{
+      const p=t.split("|");
+      if(p.length<3){const e=document.createElement("span");e.className="p";e.textContent=t;l.appendChild(e);return}
+      const w=document.createElement("div");w.className="w";
+      w.innerHTML='<span class="py">'+p[1]+'</span><span class="hz">'+p[0]+'</span>';
+      w.onclick=()=>{document.querySelectorAll(".w.on").forEach(e=>e.classList.remove("on"));w.classList.add("on");
+        const tp=$("tip");tp.style.display="block";tp.innerHTML="<b>"+p[0]+"</b>"+p[1]+" — "+p[2];speak(p[0],.7)};
+      l.appendChild(w);
+    });
+    c.appendChild(l);
+    const f=document.createElement("div");f.className="fr";f.textContent=showFr?fr:"";c.appendChild(f);
+    const r=document.createElement("div");r.className="row";
+    const b=document.createElement("button");b.className="sm";b.textContent="🔊";b.onclick=()=>speak(plain(raw));
+    r.appendChild(b);c.appendChild(r);box.appendChild(c);
+  });
+  const dn=!!S.done[k];
+  $("done").textContent=dn?"✓ Lu !":"✓ J'ai lu";
+  $("done").className="done"+(dn?" ok":"");
+  $("streak").textContent="🔥 "+streak();
+  const dots=$("dots");dots.innerHTML="";
+  for(let j=6;j>=0;j--){const e=new Date(today);e.setDate(e.getDate()-j);
+    const n=document.createElement("i");if(S.done[dayKey(e)])n.className="on";if(j===0)n.classList.add("today");dots.appendChild(n)}
+}
+
+$("done").onclick=()=>{const k=dayKey(cur());S.done[k]=!S.done[k];if(!S.done[k])delete S.done[k];save();render()};
+$("prev").onclick=()=>{ov=null;off--;render()};
+$("next").onclick=()=>{if(off<0){ov=null;off++;render()}};
+$("all").onclick=()=>{const x=T[curIdx()];speak(x.s.map(s=>plain(s[0])).join(""))};
+$("tpy").onclick=()=>{showPy=!showPy;$("tpy").classList.toggle("act",showPy);render()};
+$("tfr").onclick=()=>{showFr=!showFr;$("tfr").classList.toggle("act",showFr);render()};
+
+// ---------- Construire ----------
+const SUB=[["我","wǒ","je",0],["你","nǐ","tu",1],["他","tā","il",2],["她","tā","elle",2],["我们","wǒmen","nous",3]];
+const ETRE=["suis","es","est","est","sommes"];
+const ADJ=[["小","xiǎo",["petit","petite","petits"]],["大","dà",["grand","grande","grands"]],["高兴","gāoxìng",["content","contente","contents"]],["忙","máng",["occupé","occupée","occupés"]],["累","lèi",["fatigué","fatiguée","fatigués"]],["好","hǎo",["bien","bien","bien"],["vais","vas","va","va","allons"]]];
+const VRB=[
+{h:"吃",p:"chī",c:["mange","manges","mange","mangeons"],o:[["米饭","mǐfàn","du riz"],["一个苹果","yí ge píngguǒ","une pomme"],["面包","miànbāo","du pain"]]},
+{h:"喝",p:"hē",c:["bois","bois","boit","buvons"],o:[["水","shuǐ","de l'eau"],["茶","chá","du thé"],["一杯水","yì bēi shuǐ","un verre d'eau"]]},
+{h:"有",p:"yǒu",c:["ai","as","a","avons"],o:[["一只猫","yì zhī māo","un chat"],["三本书","sān běn shū","trois livres"],["两支笔","liǎng zhī bǐ","deux stylos"],["一张纸","yì zhāng zhǐ","une feuille"]]},
+{h:"看",p:"kàn",c:["regarde","regardes","regarde","regardons"],o:[["书","shū","un livre"],["猫","māo","le chat"]]},
+{h:"喜欢",p:"xǐhuan",c:["aime","aimes","aime","aimons"],o:[["猫","māo","les chats"],["米饭","mǐfàn","le riz"],["苹果","píngguǒ","les pommes"],["茶","chá","le thé"]]}
+];
+const NEGO={"一个苹果":["苹果","píngguǒ","de pomme"],"一只猫":["猫","māo","de chat"],"一张纸":["纸","zhǐ","de feuille"],"米饭":["米饭","mǐfàn","de riz"],"面包":["面包","miànbāo","de pain"],"水":["水","shuǐ","d'eau"],"茶":["茶","chá","de thé"],"书":["书","shū","de livre"]};
+const ITM=[
+{h:"苹果",p:"píngguǒ",c:"个",cp:"gè",y:"yí",g:"f",e:"🍎",f1:"une pomme",fp:"pommes"},
+{h:"书",p:"shū",c:"本",cp:"běn",y:"yì",g:"m",e:"📚",f1:"un livre",fp:"livres"},
+{h:"水",p:"shuǐ",c:"杯",cp:"bēi",y:"yì",g:"m",e:"💧",f1:"un verre d'eau",fp:"verres d'eau"},
+{h:"猫",p:"māo",c:"只",cp:"zhī",y:"yì",g:"m",e:"🐱",f1:"un chat",fp:"chats"},
+{h:"蛋",p:"dàn",c:"个",cp:"gè",y:"yí",g:"m",e:"🥚",f1:"un œuf",fp:"œufs"},
+{h:"学生",p:"xuésheng",c:"个",cp:"gè",y:"yí",g:"m",e:"🧑‍🎓",f1:"un élève",fp:"élèves"},
+{h:"朋友",p:"péngyou",c:"个",cp:"gè",y:"yí",g:"m",e:"🧑",f1:"un ami",fp:"amis"},
+{h:"茶",p:"chá",c:"杯",cp:"bēi",y:"yì",g:"f",e:"🍵",f1:"une tasse de thé",fp:"tasses de thé"},
+{h:"牛奶",p:"niúnǎi",c:"杯",cp:"bēi",y:"yì",g:"m",e:"🥛",f1:"un verre de lait",fp:"verres de lait"},
+{h:"狗",p:"gǒu",c:"只",cp:"zhī",y:"yì",g:"m",e:"🐶",f1:"un chien",fp:"chiens"},
+{h:"鸟",p:"niǎo",c:"只",cp:"zhī",y:"yì",g:"m",e:"🐦",f1:"un oiseau",fp:"oiseaux"},
+{h:"纸",p:"zhǐ",c:"张",cp:"zhāng",y:"yì",g:"f",e:"📄",f1:"une feuille",fp:"feuilles"},
+{h:"桌子",p:"zhuōzi",c:"张",cp:"zhāng",y:"yì",g:"f",e:"🍽️",f1:"une table",fp:"tables"},
+{h:"笔",p:"bǐ",c:"支",cp:"zhī",y:"yì",g:"m",e:"✏️",f1:"un stylo",fp:"stylos"},
+{h:"鱼",p:"yú",c:"条",cp:"tiáo",y:"yì",g:"m",e:"🐟",f1:"un poisson",fp:"poissons"},
+{h:"花",p:"huā",c:"朵",cp:"duǒ",y:"yì",g:"f",e:"🌸",f1:"une fleur",fp:"fleurs"},
+{h:"椅子",p:"yǐzi",c:"把",cp:"bǎ",y:"yì",g:"f",e:"🪑",f1:"une chaise",fp:"chaises"},
+{h:"汽车",p:"qìchē",c:"辆",cp:"liàng",y:"yí",g:"f",e:"🚗",f1:"une voiture",fp:"voitures"},
+{h:"衣服",p:"yīfu",c:"件",cp:"jiàn",y:"yí",g:"m",e:"👕",f1:"un vêtement",fp:"vêtements"}];
+const CLS=[...new Map(ITM.map(x=>[x.c,[x.c,x.cp]])).values()];
+const CUE={"个":"général : pommes, personnes, œufs…","本":"livres, cahiers","只":"animaux","杯":"verre ou tasse","张":"objets plats : feuilles, tables","支":"objets longs et fins : stylos","条":"long et souple : poissons","朵":"fleurs","把":"objets avec une poignée : chaises","辆":"véhicules","件":"vêtements"};
+const DG=["","一","二","三","四","五","六","七","八","九"],PG=["","yī","èr","sān","sì","wǔ","liù","qī","bā","jiǔ"];
+function numZh(n,it){
+  if(n===1)return ["一",it.y];
+  if(n===2)return ["两","liǎng"];
+  if(n<10)return [DG[n],PG[n]];
+  const t=Math.floor(n/10),u=n%10;
+  return [(t>1?DG[t]:"")+"十"+(u?DG[u]:""),(t>1?PG[t]+" ":"")+"shí"+(u?" "+PG[u]:"")];
+}
+function frNum(n,f){
+  const U=["zéro","un","deux","trois","quatre","cinq","six","sept","huit","neuf","dix","onze","douze","treize","quatorze","quinze","seize"];
+  const T=["","","vingt","trente","quarante","cinquante","soixante"];
+  let w;
+  if(n<=16)w=U[n];
+  else if(n<20)w="dix-"+U[n-10];
+  else{
+    const t=Math.floor(n/10),u=n%10;
+    if(t<=6)w=T[t]+(u===0?"":(u===1?" et un":"-"+U[u]));
+    else if(t===7){const m=n-60;w=m===11?"soixante et onze":"soixante-"+(m<17?U[m]:"dix-"+U[m-10])}
+    else if(t===8)w=u===0?"quatre-vingts":"quatre-vingt-"+U[u];
+    else{const m=n-80;w="quatre-vingt-"+(m<17?U[m]:"dix-"+U[m-10])}
+  }
+  return f?w.replace(/un$/,"une"):w;
+}
+const NUMH=["一","两","三","四","五","六","七","八","九","十"];
+const NUMP=["","liǎng","sān","sì","wǔ","liù","qī","bā","jiǔ","shí"];
+const FRN=["un","deux","trois","quatre","cinq","six","sept","huit","neuf","dix"];
+const cap=t=>t.charAt(0).toUpperCase()+t.slice(1)+".";
+const vow=/^[aeiouéhê]/;
+function gen(st){
+  const s=SUB[st.s],parts=[[s[0],s[1],"S"]];let fr;
+  if(st.m===2){
+    const it=ITM[st.i],n=st.n,cj=VRB[2].c[s[3]];
+    const nz=numZh(n,it);
+    parts.push(["有","yǒu","V"],[nz[0],nz[1],"NUM"],[it.c,it.cp,"CL"],[it.h,it.p,"N"]);
+    const q=n===1?it.f1:frNum(n,it.g==="f")+" "+it.fp;
+    fr=(s[2]==="je"&&vow.test(cj))?"j'"+cj+" "+q:s[2]+" "+cj+" "+q;
+    return {parts,fr:cap(fr),hz:parts.map(p=>p[0]).join("")+"。"};
+  }
+  if(st.m===1){
+    const a=ADJ[st.a],vb=a[3]?a[3][st.s]:ETRE[st.s],g=s[2]==="elle"?1:(s[2]==="nous"?2:0),af=a[2][g];
+    if(st.neg){parts.push(["不","bù","NEG"]);fr=s[2]+(vow.test(vb)?" n'":" ne ")+vb+" pas "+af}
+    else{parts.push(["很","hěn","DEG"]);fr=s[2]+" "+vb+" très "+af}
+    parts.push([a[0],a[1],"ADJ"]);
+  }else{
+    const v=VRB[st.v];let o=v.o[st.o];const cj=v.c[s[3]];
+    if(st.neg){
+      if(v.h==="有")parts.push(["没","méi","NEG"],["有","yǒu","V"]);else parts.push(["不","bù","NEG"],[v.h,v.p,"V"]);
+      if(v.h!=="喜欢"&&NEGO[o[0]])o=NEGO[o[0]];
+      fr=s[2]+(vow.test(cj)?" n'":" ne ")+cj+" pas "+o[2];
+    }else{
+      parts.push([v.h,v.p,"V"]);
+      fr=(s[2]==="je"&&vow.test(cj))?"j'"+cj+" "+o[2]:s[2]+" "+cj+" "+o[2];
+    }
+    parts.push([o[0],o[1],"O"]);
+  }
+  return {parts,fr:cap(fr),hz:parts.map(p=>p[0]).join("")+"。"};
+}
+let B={s:0,m:0,v:0,o:0,a:0,i:0,n:3,neg:false};
+function chip(a,b,on,fn){const e=document.createElement("button");e.className="chip"+(on?" on":"");
+  e.innerHTML='<div class="c1">'+a+'</div><div class="c2">'+b+'</div>';e.onclick=fn;return e}
+function bGo(f){f();bRender();speak(gen(B).hz)}
+function bRender(){
+  const r=gen(B),line=$("bline");line.innerHTML="";
+  r.parts.forEach(p=>{const w=document.createElement("div");w.className="w"+(p[2]==="CL"?" cl":"");
+    w.innerHTML='<span class="py">'+p[1]+'</span><span class="hz">'+p[0]+'</span>';
+    w.onclick=()=>speak(p[0],.7);line.appendChild(w)});
+  const d=document.createElement("span");d.className="p";d.style.fontSize="46px";d.textContent="。";line.appendChild(d);
+  $("btr").textContent=r.fr;
+  $("bemo").textContent=B.m===2?(B.n<=20?ITM[B.i].e.repeat(B.n):ITM[B.i].e+" × "+B.n):"";
+  ["mA","mE","mC"].forEach((id,i)=>$(id).classList.toggle("on",B.m===i));
+  $("nG").classList.toggle("on",B.neg&&B.m<2);$("nG").classList.toggle("hid",B.m===2);
+  $("gV").classList.toggle("hid",B.m!==0);$("gN").classList.toggle("hid",B.m!==2);
+  $("lOh").textContent=["饭","忙","本"][B.m];$("lOt").textContent=["Quoi ?","État","Quoi ?"][B.m];
+  const S_=$("cS"),V_=$("cV"),O_=$("cO"),N_=$("cN"),T_=$("cT");S_.innerHTML=V_.innerHTML=O_.innerHTML=N_.innerHTML=T_.innerHTML="";
+  SUB.forEach((x,i)=>S_.appendChild(chip(x[0],x[2],i===B.s,()=>bGo(()=>B.s=i))));
+  VRB.forEach((x,i)=>V_.appendChild(chip(x.h,x.p,i===B.v,()=>bGo(()=>{B.v=i;B.o=0}))));
+  if(B.m===1)ADJ.forEach((x,i)=>O_.appendChild(chip(x[0],x[2][0],i===B.a,()=>bGo(()=>B.a=i))));
+  else if(B.m===2){
+    ITM.forEach((x,i)=>O_.appendChild(chip(x.h,x.c+" "+x.f1.replace(/^(un|une) /,""),i===B.i,()=>bGo(()=>B.i=i))));
+    for(let k=0;k<10;k++)N_.appendChild(chip(String(k),k?DG[k]:"·",B.n%10===k,()=>bGo(()=>{B.n=Math.floor(B.n/10)*10+k;if(B.n===0)B.n=1})));
+    for(let k=0;k<10;k++)T_.appendChild(chip(k?String(k*10):"0",k?(k>1?DG[k]:"")+"十":"·",Math.floor(B.n/10)===k,()=>bGo(()=>{B.n=k*10+B.n%10;if(B.n===0)B.n=1})));
+  }
+  else VRB[B.v].o.forEach((x,i)=>O_.appendChild(chip(x[0],x[2],i===B.o,()=>bGo(()=>B.o=i))));
+}
+$("mA").onclick=()=>bGo(()=>B.m=0);
+$("mE").onclick=()=>bGo(()=>B.m=1);
+$("mC").onclick=()=>bGo(()=>B.m=2);
+$("nG").onclick=()=>bGo(()=>B.neg=!B.neg);
+$("bsay").onclick=()=>speak(gen(B).hz);
+const rnd=n=>Math.floor(Math.random()*n);
+$("brnd").onclick=()=>bGo(()=>{B.s=rnd(SUB.length);B.m=rnd(3);B.v=rnd(VRB.length);B.o=rnd(VRB[B.v].o.length);B.a=rnd(ADJ.length);B.i=rnd(ITM.length);B.n=1+rnd(99);B.neg=Math.random()<.3});
+
+// ---------- Quiz ----------
+S.q=S.q||{ok:0,tot:0};
+const HINT={S:"Qui fait l'action ? Commence par là.",V:"Quelle est l'action ?",O:"Sur quoi porte l'action ?",NEG:"Comment dit-on « ne … pas » ? Et où le place-t-on ?",DEG:"Comment dit-on « très » ? Où va-t-il ?",NUM:"Combien y en a-t-il ?",CL:"Quel petit mot sert à compter cet objet ?",N:"Qu'est-ce qu'on compte ?",ADJ:"Comment est la personne ?"};
+const DIS=[["不","bù"],["很","hěn"],["的","de"],["我们","wǒmen"],["也","yě"],["都","dōu"]];
+let Q=null;
+function shuf(a){for(let i=a.length-1;i>0;i--){const j=rnd(i+1);[a[i],a[j]]=[a[j],a[i]]}return a}
+function qNew(){
+  const rr=Math.random(),m=rr<.25?1:(rr<.6?2:0),v=rnd(VRB.length);
+  const r=gen({s:rnd(SUB.length),m:m,v:v,o:rnd(VRB[v].o.length),a:rnd(ADJ.length),i:rnd(ITM.length),n:Math.random()<.6?1+rnd(10):1+rnd(99),neg:Math.random()<.3});
+  const have=r.parts.map(p=>p[0]);
+  const pool=m===2?CLS:DIS;
+  const ds=shuf(pool.filter(d=>!have.includes(d[0]))).slice(0,2);
+  const tiles=shuf(r.parts.map(p=>[p[0],p[1]]).concat(ds)).map((t,i)=>({id:i,h:t[0],p:t[1]}));
+  Q={r:r,tiles:tiles,placed:[],done:false,tries:0};
+  qRender("");
+}
+function qRender(msg,ok){
+  $("qfr").textContent=Q.r.fr;
+  const A=$("qans"),P=$("qpool");A.innerHTML=P.innerHTML="";
+  Q.placed.forEach(id=>{const t=Q.tiles[id];A.appendChild(chip(t.h,t.p,false,()=>{if(Q.done)return;Q.placed=Q.placed.filter(x=>x!==id);qRender("")}))});
+  Q.tiles.forEach(t=>{if(!Q.placed.includes(t.id))P.appendChild(chip(t.h,t.p,false,()=>qPick(t.id)))});
+  const m=$("qmsg");m.textContent=msg||"";m.className="qmsg"+(ok?" ok":"");
+  $("qsc").textContent="⭐ "+S.q.ok+" / "+S.q.tot;
+}
+function qPick(id){
+  if(Q.done)return;
+  Q.placed.push(id);speak(Q.tiles[id].h,.7);
+  const n=Q.r.parts.length;
+  if(Q.placed.length<n){qRender("");return}
+  const i=Q.placed.findIndex((id2,k)=>Q.tiles[id2].h!==Q.r.parts[k][0]);
+  if(i<0){
+    Q.done=true;S.q.tot++;if(Q.tries===0)S.q.ok++;save();
+    qRender("✓ "+Q.r.hz,true);chime();speak(Q.r.hz);
+  }else{
+    Q.tries++;Q.placed=Q.placed.slice(0,i);
+    qRender(HINT[Q.r.parts[i][2]]);
+  }
+}
+$("qnext").onclick=qNew;
+$("qreset").onclick=()=>{if(Q&&!Q.done){Q.placed=[];qRender("")}};
+// ---------- Paires ----------
+S.p=S.p||{ok:0,tot:0};
+let P=null;
+const L1="个本只杯";
+function pNew(){
+  const l1=S.p.ok<8;
+  const pool=l1?ITM.filter(x=>L1.includes(x.c)):ITM;
+  const it=pool[rnd(pool.length)];
+  const cls=(l1?CLS.filter(c=>L1.includes(c[0])):CLS).filter(c=>c[0]!==it.c);
+  P={it:it,opts:shuf([[it.c,it.cp]].concat(shuf(cls).slice(0,l1?2:3))),wrong:[],done:false};
+  pRender("");
+}
+function pRender(msg,ok){
+  const it=P.it,l=$("pline");
+  $("pemo").textContent=it.e;
+  if(P.done)l.innerHTML='<div class="w cl"><span class="py">sān '+P.right[1]+' '+it.p+'</span><span class="hz">三<span style="color:var(--acc)">'+P.right[0]+'</span>'+it.h+'</span></div>';
+  else l.innerHTML='<div class="w"><span class="py">'+it.p+'</span><span class="hz">'+it.h+'</span></div>';
+  l.firstChild.onclick=()=>speak(it.h,.7);
+  $("pfr").textContent=it.f1.replace(/^(un|une) /,"");
+  const O=$("popts");O.innerHTML="";
+  P.opts.forEach(c=>{if(P.wrong.includes(c[0]))return;if(P.done&&c[0]!==P.right[0])return;O.appendChild(chip(c[0],c[1],false,()=>pPick(c)))});
+  const m=$("pmsg");m.textContent=msg||"";m.className="qmsg"+(ok?" ok":"");
+  $("psc").textContent="⭐ "+S.p.ok+" / "+S.p.tot+" · "+(S.p.ok<8?"Niveau 1 : 个 本 只 杯":"Niveau 2 : tous");
+}
+function pPick(c){
+  if(P.done)return;
+  if(c[0]===P.it.c){
+    P.done=true;P.right=c;S.p.tot++;if(!P.wrong.length)S.p.ok++;save();
+    pRender("✓ "+c[0]+" = "+CUE[c[0]],true);chime();speak("三"+c[0]+P.it.h);
+  }else{
+    P.wrong.push(c[0]);
+    pRender("Regarde l'objet : est-ce un animal, un contenant, quelque chose de plat ou de long ?");
+  }
+}
+$("pnext").onclick=pNew;
+function tab(n){
+  [["vRead","tabR"],["vBuild","tabB"],["vQuiz","tabQ"],["vPair","tabP"]].forEach((x,i)=>{
+    $(x[0]).classList.toggle("hid",i!==n);$(x[1]).classList.toggle("on",i===n)});
+  if(L.on)stopL();
+  if(n===1)bRender();
+  if(n===2&&!Q)qNew();
+  if(n===3&&!P)pNew();
+}
+$("tabR").onclick=()=>tab(0);$("tabB").onclick=()=>tab(1);$("tabQ").onclick=()=>tab(2);$("tabP").onclick=()=>tab(3);
+
+// ---------- Écoute en boucle + sons ----------
+let ov=null;
+function curIdx(){if(ov!==null)return ov;return ((dayNum(cur())%T.length)+T.length)%T.length}
+const L={on:false,tok:0,slow:true,fr:false,all:false,wl:null};
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+function sp(txt,lang,rate){return new Promise(res=>{
+  if(!window.speechSynthesis){res();return}
+  const u=new SpeechSynthesisUtterance(txt);u.lang=lang;u.rate=rate;
+  const vs=speechSynthesis.getVoices(),lc=lang.toLowerCase();
+  const v=vs.find(v=>v.lang.replace("_","-").toLowerCase()===lc)||vs.find(v=>v.lang.toLowerCase().startsWith(lc.slice(0,2)));
+  if(v)u.voice=v;
+  let done=false,tm;const fin=()=>{if(!done){done=true;clearTimeout(tm);res()}};
+  u.onend=fin;u.onerror=fin;
+  tm=setTimeout(fin,Math.max(3000,txt.length*700/rate));
+  speechSynthesis.speak(u);
+})}
+function lui(){$("lis").textContent=L.on?"⏹ Stop":"🎧 Écoute";$("lis").classList.toggle("act",L.on)}
+async function listen(){
+  const my=++L.tok;L.on=true;lui();
+  try{if(navigator.wakeLock)L.wl=await navigator.wakeLock.request("screen")}catch(e){}
+  try{speechSynthesis.cancel()}catch(e){}
+  while(L.tok===my){
+    const x=T[curIdx()];
+    for(let k=0;k<x.s.length&&L.tok===my;k++){
+      document.querySelectorAll(".sent").forEach((e,j)=>{e.style.outline=j===k?"3px solid var(--acc)":""});
+      const zh=plain(x.s[k][0]);
+      if(L.slow){await sp(zh,"zh-CN",.55);if(L.tok!==my)break;await wait(500)}
+      await sp(zh,"zh-CN",.9);if(L.tok!==my)break;
+      if(L.fr){await wait(300);await sp(x.s[k][1],"fr-FR",1);if(L.tok!==my)break}
+      await wait(900);
+    }
+    if(L.tok!==my)break;
+    if(L.all){ov=(curIdx()+1)%T.length;render()}
+    await wait(800);
+  }
+}
+function stopL(){
+  L.tok++;L.on=false;
+  try{speechSynthesis.cancel()}catch(e){}
+  try{if(L.wl)L.wl.release()}catch(e){}
+  L.wl=null;
+  document.querySelectorAll(".sent").forEach(e=>{e.style.outline=""});
+  lui();
+}
+$("lis").onclick=()=>{L.on?stopL():listen()};
+$("lslow").onclick=()=>{L.slow=!L.slow;$("lslow").classList.toggle("act",L.slow)};
+$("lfr").onclick=()=>{L.fr=!L.fr;$("lfr").classList.toggle("act",L.fr)};
+$("lall").onclick=()=>{L.all=!L.all;$("lall").classList.toggle("act",L.all)};
+document.addEventListener("visibilitychange",()=>{if(document.hidden&&L.on)stopL()});
+function chime(){try{
+  const a=new (window.AudioContext||window.webkitAudioContext)();
+  [660,880].forEach((f,i)=>{const o=a.createOscillator(),g=a.createGain(),t=a.currentTime+i*.12;
+    o.type="sine";o.frequency.value=f;
+    g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.15,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.3);
+    o.connect(g);g.connect(a.destination);o.start(t);o.stop(t+.32)});
+}catch(e){}}
+if(window.speechSynthesis)speechSynthesis.onvoiceschanged=()=>{};
+render();
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script>
+</body>
+</html>
