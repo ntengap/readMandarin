@@ -72,6 +72,24 @@ h1{font-size:22px;margin:4px 0 2px;text-align:center}
 .ov{position:fixed;inset:0;background:#0006;display:flex;align-items:flex-end;justify-content:center;z-index:9}
 .ov>div{background:var(--card);border-radius:24px 24px 0 0;padding:22px 20px calc(24px + env(safe-area-inset-bottom));max-width:560px;width:100%;text-align:center;font-size:18px;line-height:1.9}
 .ov b{font-size:22px;display:block;margin-bottom:6px}.ov button{margin-top:12px;background:var(--acc);color:#fff;border-radius:24px;padding:12px 32px;font-size:16px;font-weight:700}
+.nsub{display:flex;gap:6px;margin:6px 0 10px}.nsub button{flex:1;padding:10px 4px;border-radius:18px;background:var(--card);font-size:14px;font-weight:700;box-shadow:0 1px 3px #0002;color:var(--soft)}.nsub button.on{background:var(--acc);color:#fff}
+.ncard{display:flex;align-items:center;gap:12px;background:var(--card);border-radius:18px;padding:10px 14px;margin-bottom:8px;box-shadow:0 1px 3px #0001;width:100%;text-align:left}
+.ncard .nm{font-size:32px}.ncard .nh{font-size:28px;line-height:1.15}.ncard .np{font-size:14px;color:var(--acc)}.ncard .nr{margin-left:auto;text-align:right}.ncard .nf{font-size:13px;color:var(--soft)}.ncard.on{outline:3px solid var(--acc)}
+.tgs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}.tgs button{padding:8px 12px;border-radius:18px;background:var(--card);font-size:14px;font-weight:700;box-shadow:0 1px 3px #0002;color:var(--soft)}.tgs button.on{background:var(--acc);color:#fff}
+.tcard{display:flex;gap:8px;align-items:center;background:var(--card);border-radius:18px;padding:12px 14px;margin-bottom:8px;box-shadow:0 1px 3px #0001}
+.tcard .tt{flex:1;cursor:pointer}.tcard .th{font-size:24px;line-height:1.3}.tcard .tp{font-size:14px;color:var(--acc)}.tcard .tf{font-size:14px;color:var(--soft)}
+.tcard .tb{display:flex;flex-direction:column;gap:6px}.tcard .tb button{background:var(--bg);border-radius:14px;padding:8px 10px;font-size:16px}
+.bigshow{position:fixed;inset:0;background:#fff;color:#111;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+.bigshow .bh{font-size:min(15vw,80px);line-height:1.35;font-weight:600}.bigshow .bf{margin-top:24px;font-size:15px;color:#666}.bigshow .sp{margin-top:20px;font-size:24px;background:#eee;border-radius:30px;padding:12px 28px;color:#111}
+.gopt{display:block;width:100%;background:var(--card);border-radius:18px;padding:14px;margin-bottom:8px;font-size:17px;box-shadow:0 1px 3px #0002;text-align:left}.gopt.dim{opacity:.35}.gopt.good{outline:3px solid var(--ok)}
+#mainTabs{overflow-x:auto;scrollbar-width:none}#mainTabs::-webkit-scrollbar{display:none}#mainTabs button{flex:0 0 auto;padding:10px 13px;white-space:nowrap}
+.big .p{font-size:46px}.big .line.s5 .hz,.big .line.s5 .p{font-size:30px}.big .line.s5 .w{padding:2px 3px}.big .line.s5 .py{font-size:13px}.dbar{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:4px 0 8px}.dbar button{background:var(--card);border-radius:18px;padding:8px 12px;font-size:14px;box-shadow:0 1px 3px #0002}.dbar button.act{background:var(--acc);color:#fff}.dbar .nf{font-size:14px;color:var(--soft);text-align:center;flex:1}
+.dnpc{background:var(--card);border-radius:20px;padding:16px;margin:6px 0 12px;box-shadow:0 1px 4px #0001;display:flex;gap:10px;align-items:flex-start}.dnpc .dav{font-size:32px}.dnpc .dh{font-size:26px;line-height:1.3}.dnpc .dp{font-size:14px;color:var(--acc)}.dnpc .df{font-size:14px;color:var(--soft);margin-top:4px}.dnpc.dsit{font-style:italic;color:var(--soft);font-size:17px}
+.gopt .oh{font-size:20px}.gopt .op{font-size:13px;color:var(--acc)}.gopt .of{font-size:13px;color:var(--soft)}.gopt.good{outline:3px solid var(--ok)}
+.tncard{display:flex;gap:12px;align-items:center;background:var(--card);border-radius:18px;padding:10px 14px;margin-bottom:8px;box-shadow:0 1px 3px #0001;cursor:pointer;color:var(--ink)}.tncard svg{flex:none;color:var(--ink)}.tncard .a{font-size:26px;line-height:1.2}.tncard .b{font-size:14px;color:var(--acc)}.tncard .c{font-size:14px;color:var(--soft)}
+.tonegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px}.tbtn{display:flex!important;flex-direction:column;align-items:center;gap:2px;padding:10px 4px!important;margin:0!important;text-align:center!important;color:var(--ink)}.tbtn span{font-size:14px;color:var(--soft)}.tbtn svg{color:var(--ink)}
+.mrow{display:flex;gap:8px;align-items:stretch;margin-bottom:8px}.mrow .gopt{flex:1;margin:0}.mrow .sm{padding:0 16px;font-size:18px}
+.sndc{background:var(--card);border-radius:18px;padding:12px 14px;margin-bottom:8px;box-shadow:0 1px 3px #0001}.sndc .t{display:flex;gap:12px;align-items:center;margin-bottom:8px}.sndc .l{font-size:30px;font-weight:700;color:var(--acc);min-width:52px}.sndc .d{font-size:14px;color:var(--soft)}
 </style>
 </head>
 <body>
@@ -80,7 +98,7 @@ h1{font-size:22px;margin:4px 0 2px;text-align:center}
   <button class="inst hid" id="inst">⬇ Installer</button>
   <div class="nav"><button class="ic" id="prev">‹</button><span id="pos"></span><button class="ic" id="next">›</button></div>
 </header>
-<div class="tabs t4"><button id="tabR" class="on">读 Lire</button><button id="tabB">造 Construire</button><button id="tabQ">考 Quiz</button><button id="tabP">配 Paires</button></div>
+<div class="tabs t4" id="mainTabs"><button id="tabR" class="on">读 Lire</button><button id="tabB">造 Créer</button><button id="tabQ">考 Quiz</button><button id="tabP">配 Paires</button><button id="tabN">名 Noms</button><button id="tabT">旅 Voyage</button><button id="tabS">声 Tons</button></div>
 <div id="vRead">
 <h1 id="title"></h1>
 <div class="date" id="date"></div>
@@ -120,6 +138,30 @@ h1{font-size:22px;margin:4px 0 2px;text-align:center}
   <div class="qmsg" id="pmsg"></div>
   <div class="brow"><button id="pnext">Suivant ›</button></div>
   <div class="qsc" id="psc"></div>
+</div>
+<div id="vNames" class="hid">
+  <div class="hint">Touche une carte pour l'écouter</div>
+  <div class="nsub"><button id="nsv" class="on">🏙 Villes</button><button id="nse">🏢 Entreprises</button><button id="nsp">👤 Personnes</button></div>
+  <div id="nlist"></div>
+</div>
+<div id="vTrip" class="hid">
+  <div class="hint">Touche une phrase pour l'écouter · 📲 pour la montrer à quelqu'un</div>
+  <div class="tgs" id="tgs"></div>
+  <div class="tools" style="margin:0 0 10px"><button id="tg">🎧 Écoute &amp; devine</button><button id="td">💬 Dialogues</button></div>
+  <div id="tlist"></div>
+  <div id="tgame" class="hid">
+    <div class="big"><div style="font-size:54px">🎧</div><div class="tr">Écoute, puis choisis le sens</div>
+      <div class="row"><button class="sm" id="gplay">🔊</button><button class="sm" id="gslow">🐢</button></div></div>
+    <div id="gopts"></div>
+    <div class="qmsg" id="gmsg"></div>
+    <div class="brow"><button id="gnext">Suivant ›</button></div>
+    <div class="qsc" id="gsc"></div>
+  </div>
+  <div id="tdlg" class="hid"></div>
+</div>
+<div id="vTone" class="hid">
+  <div class="tgs" id="ttabs"></div>
+  <div id="tcont"></div>
 </div>
 
 <script>
@@ -164,7 +206,218 @@ const T=[
 {t:"Deux chats",s:[
 ["我|wǒ|je 家|jiā|maison 有|yǒu|avoir 一|yì|un 只|zhī|(classificateur : animaux) 大|dà|grand 猫|māo|chat 和|hé|et 一|yì|un 只|zhī|(classificateur : animaux) 小|xiǎo|petit 猫|māo|chat 。","Chez moi, il y a un grand chat et un petit chat."],
 ["大|dà|grand 猫|māo|chat 喜欢|xǐhuan|aimer 睡觉|shuìjiào|dormir 。","Le grand chat aime dormir."],
-["小|xiǎo|petit 猫|māo|chat 喜欢|xǐhuan|aimer 玩|wán|jouer 。","Le petit chat aime jouer."]]}
+["小|xiǎo|petit 猫|māo|chat 喜欢|xǐhuan|aimer 玩|wán|jouer 。","Le petit chat aime jouer."]]},
+{t:"Les courses",s:[["我|wǒ|je 去|qù|aller 市场|shìchǎng|marché 。", "Je vais au marché."],
+["我|wǒ|je 要|yào|vouloir 三|sān|trois 个|gè|(classificateur général) 苹果|píngguǒ|pomme 。", "Je voudrais trois pommes."],
+["我|wǒ|je 也|yě|aussi 要|yào|vouloir 两|liǎng|deux 条|tiáo|(classificateur : poissons) 鱼|yú|poisson 。", "Je voudrais aussi deux poissons."]]},
+{t:"Que veux-tu ?",s:[["你好|nǐ hǎo|bonjour ！ 你|nǐ|tu 要|yào|vouloir 什么|shénme|quoi ？", "Bonjour ! Que veux-tu ?"],
+["我|wǒ|je 要|yào|vouloir 一|yì|un 杯|bēi|(classificateur : verre) 茶|chá|thé 和|hé|et 一|yì|un 杯|bēi|(classificateur : verre) 牛奶|niúnǎi|lait 。", "Je voudrais un thé et un lait."],
+["谢谢|xièxie|merci ！ 再见|zàijiàn|au revoir ！", "Merci ! Au revoir !"]]},
+{t:"Combien ?",s:[["这|zhè|ce 个|gè|(classificateur général) 苹果|píngguǒ|pomme 多少|duōshao|combien 钱|qián|argent ？", "Combien coûte cette pomme ?"],
+["一|yí|un 个|gè|(classificateur général) 五|wǔ|cinq 块|kuài|yuan 。", "Cinq yuans la pomme."],
+["很|hěn|très 好|hǎo|bien ， 我|wǒ|je 要|yào|vouloir 三|sān|trois 个|gè|(classificateur général) 。", "Très bien, j'en prends trois."]]},
+{t:"Les fleurs",s:[["我|wǒ|je 喜欢|xǐhuan|aimer 花|huā|fleur 。", "J'aime les fleurs."],
+["我|wǒ|je 要|yào|vouloir 五|wǔ|cinq 朵|duǒ|(classificateur : fleurs) 花|huā|fleur 。", "Je voudrais cinq fleurs."],
+["花|huā|fleur 很|hěn|très 好看|hǎokàn|joli 。", "Les fleurs sont très jolies."]]},
+{t:"Ma classe",s:[["这|zhè|ceci 是|shì|être 我|wǒ|je 的|de|(possessif) 班|bān|classe 。", "Voici ma classe."],
+["班|bān|classe 里|lǐ|dans 有|yǒu|il y a 二十|èrshí|vingt 个|gè|(classificateur général) 学生|xuésheng|élève 。", "Dans la classe, il y a vingt élèves."],
+["我们|wǒmen|nous 有|yǒu|avoir 一|yí|un 个|gè|(classificateur général) 老师|lǎoshī|professeur 。", "Nous avons un professeur."]]},
+{t:"Sur la table",s:[["桌子|zhuōzi|table 上|shàng|sur 有|yǒu|il y a 三|sān|trois 本|běn|(classificateur : livres) 书|shū|livre 。", "Sur la table, il y a trois livres."],
+["还|hái|aussi 有|yǒu|il y a 两|liǎng|deux 支|zhī|(classificateur : stylos) 笔|bǐ|stylo 和|hé|et 一|yì|une 张|zhāng|(classificateur : feuilles) 纸|zhǐ|papier 。", "Il y a aussi deux stylos et une feuille."],
+["老师|lǎoshī|professeur 喜欢|xǐhuan|aimer 看|kàn|lire 书|shū|livre 。", "Le professeur aime lire."]]},
+{t:"Mes camarades",s:[["我|wǒ|je 在|zài|être à 学校|xuéxiào|école 。", "Je suis à l'école."],
+["我|wǒ|mon 的|de|(possessif) 朋友|péngyou|ami 在|zài|être dans 我|wǒ|ma 的|de|(possessif) 班|bān|classe 里|lǐ|dans 。", "Mon ami est dans ma classe."],
+["我们|wǒmen|nous 都|dōu|tous 喜欢|xǐhuan|aimer 老师|lǎoshī|professeur 。", "Nous aimons tous le professeur."]]},
+{t:"Ma famille",s:[["我|wǒ|mon 家|jiā|famille 有|yǒu|avoir 五|wǔ|cinq 个|gè|(classificateur général) 人|rén|personne 。", "Dans ma famille, il y a cinq personnes."],
+["爸爸|bàba|papa 、 妈妈|māma|maman 、 哥哥|gēge|grand frère 、 姐姐|jiějie|grande sœur 和|hé|et 我|wǒ|moi 。", "Papa, maman, mon grand frère, ma grande sœur et moi."],
+["我|wǒ|je 爱|ài|aimer 我|wǒ|ma 的|de|(possessif) 家|jiā|famille 。", "J'aime ma famille."]]},
+{t:"À table",s:[["爸爸|bàba|papa 吃|chī|manger 米饭|mǐfàn|riz 。", "Papa mange du riz."],
+["妈妈|māma|maman 吃|chī|manger 鱼|yú|poisson 。", "Maman mange du poisson."],
+["我|wǒ|je 吃|chī|manger 一|yí|un 个|gè|(classificateur général) 蛋|dàn|œuf 。", "Je mange un œuf."],
+["我们|wǒmen|nous 都|dōu|tous 喝|hē|boire 水|shuǐ|eau 。", "Nous buvons tous de l'eau."]]},
+{t:"Mes animaux",s:[["我|wǒ|mon 家|jiā|maison 有|yǒu|avoir 一|yì|un 只|zhī|(classificateur : animaux) 狗|gǒu|chien 和|hé|et 两|liǎng|deux 只|zhī|(classificateur : animaux) 猫|māo|chat 。", "Chez moi, il y a un chien et deux chats."],
+["狗|gǒu|chien 很|hěn|très 大|dà|grand ， 猫|māo|chat 很|hěn|très 小|xiǎo|petit 。", "Le chien est grand, les chats sont petits."],
+["我们|wǒmen|nous 都|dōu|tous 喜欢|xǐhuan|aimer 它们|tāmen|eux (animaux) 。", "Nous les aimons tous."]]},
+{t:"Mes vêtements",s:[["我|wǒ|je 有|yǒu|avoir 三|sān|trois 件|jiàn|(classificateur : vêtements) 衣服|yīfu|vêtement 。", "J'ai trois vêtements."],
+["这|zhè|ce 件|jiàn|(classificateur : vêtements) 衣服|yīfu|vêtement 很|hěn|très 大|dà|grand 。", "Ce vêtement est très grand."],
+["我|wǒ|je 不|bù|ne… pas 喜欢|xǐhuan|aimer 大|dà|grand 衣服|yīfu|vêtement 。", "Je n'aime pas les grands vêtements."]]},
+{t:"À la maison",s:[["家|jiā|maison 里|lǐ|dans 有|yǒu|il y a 一|yì|une 张|zhāng|(classificateur : tables) 桌子|zhuōzi|table 和|hé|et 四|sì|quatre 把|bǎ|(classificateur : chaises) 椅子|yǐzi|chaise 。", "À la maison, il y a une table et quatre chaises."],
+["桌子|zhuōzi|table 上|shàng|sur 有|yǒu|il y a 一|yì|une 杯|bēi|(classificateur : verre) 茶|chá|thé 。", "Sur la table, il y a une tasse de thé."],
+["我们|wǒmen|nous 在|zài|à 家|jiā|maison 吃饭|chīfàn|manger 。", "Nous mangeons à la maison."]]},
+{t:"La voiture de papa",s:[["爸爸|bàba|papa 有|yǒu|avoir 一|yí|une 辆|liàng|(classificateur : véhicules) 汽车|qìchē|voiture 。", "Papa a une voiture."],
+["汽车|qìchē|voiture 很|hěn|très 大|dà|grand 。", "La voiture est grande."],
+["我们|wǒmen|nous 都|dōu|tous 喜欢|xǐhuan|aimer 汽车|qìchē|voiture 。", "Nous aimons tous la voiture."]]},
+{t:"Le petit-déjeuner",s:[["早上|zǎoshang|le matin ， 我|wǒ|je 吃|chī|manger 面包|miànbāo|pain 和|hé|et 一|yí|un 个|gè|(classificateur général) 蛋|dàn|œuf 。", "Le matin, je mange du pain et un œuf."],
+["我|wǒ|je 喝|hē|boire 一|yì|un 杯|bēi|(classificateur : verre) 牛奶|niúnǎi|lait 。", "Je bois un verre de lait."],
+["很|hěn|très 好吃|hǎochī|délicieux ！", "C'est très bon !"]]},
+{t:"Une pomme rouge",s:[["我|wǒ|je 有|yǒu|avoir 一|yí|un 个|gè|(classificateur général) 红|hóng|rouge 苹果|píngguǒ|pomme 。", "J'ai une pomme rouge."],
+["红|hóng|rouge 苹果|píngguǒ|pomme 很|hěn|très 好吃|hǎochī|délicieux 。", "La pomme rouge est très bonne."],
+["我|wǒ|je 喜欢|xǐhuan|aimer 吃|chī|manger 苹果|píngguǒ|pomme 。", "J'aime manger des pommes."]]},
+{t:"Les bananes",s:[["这|zhè|ceci 是|shì|être 香蕉|xiāngjiāo|banane 。", "Ce sont des bananes."],
+["香蕉|xiāngjiāo|banane 是|shì|être 黄色|huángsè|jaune 的|de|(particule) 。", "Les bananes sont jaunes."],
+["我|wǒ|je 要|yào|vouloir 三|sān|trois 根|gēn|(classificateur : objets longs) 香蕉|xiāngjiāo|banane 。", "Je voudrais trois bananes."]]},
+{t:"La soupe",s:[["晚上|wǎnshang|le soir ， 我们|wǒmen|nous 吃|chī|manger 面条|miàntiáo|nouilles 。", "Le soir, nous mangeons des nouilles."],
+["我|wǒ|je 喝|hē|boire 一|yì|un 碗|wǎn|(classificateur : bol) 汤|tāng|soupe 。", "Je bois un bol de soupe."],
+["汤|tāng|soupe 很|hěn|très 好喝|hǎohē|délicieux (à boire) 。", "La soupe est très bonne."]]},
+{t:"J'ai faim",s:[["我|wǒ|je 很|hěn|très 饿|è|avoir faim 。", "J'ai très faim."],
+["我|wǒ|je 要|yào|vouloir 吃|chī|manger 米饭|mǐfàn|riz 和|hé|et 鱼|yú|poisson 。", "Je veux manger du riz et du poisson."],
+["我|wǒ|je 不|bú|ne… pas 要|yào|vouloir 茶|chá|thé ， 我|wǒ|je 要|yào|vouloir 水|shuǐ|eau 。", "Je ne veux pas de thé, je veux de l'eau."]]},
+{t:"Au restaurant",s:[["你好|nǐ hǎo|bonjour ！ 我|wǒ|je 要|yào|vouloir 一|yì|un 碗|wǎn|(classificateur : bol) 面条|miàntiáo|nouilles 。", "Bonjour ! Je voudrais un bol de nouilles."],
+["你|nǐ|tu 要|yào|vouloir 喝|hē|boire 什么|shénme|quoi ？", "Que veux-tu boire ?"],
+["我|wǒ|je 要|yào|vouloir 一|yì|un 杯|bēi|(classificateur : verre) 茶|chá|thé ， 谢谢|xièxie|merci 。", "Je voudrais un thé, merci."]]},
+{t:"Les couleurs",s:[["苹果|píngguǒ|pomme 是|shì|être 红色|hóngsè|rouge 的|de|(particule) 。", "La pomme est rouge."],
+["天|tiān|ciel 是|shì|être 蓝色|lánsè|bleu 的|de|(particule) 。", "Le ciel est bleu."],
+["猫|māo|chat 是|shì|être 白色|báisè|blanc 的|de|(particule) 。", "Le chat est blanc."]]},
+{t:"Mon chat blanc",s:[["我|wǒ|je 的|de|(particule) 猫|māo|chat 是|shì|être 白色|báisè|blanc 的|de|(particule) 。", "Mon chat est blanc."],
+["它|tā|il (animal) 很|hěn|très 小|xiǎo|petit 。", "Il est très petit."],
+["它|tā|il (animal) 喜欢|xǐhuan|aimer 喝|hē|boire 牛奶|niúnǎi|lait 。", "Il aime boire du lait."]]},
+{t:"Mon chien noir",s:[["我|wǒ|je 的|de|(particule) 狗|gǒu|chien 是|shì|être 黑色|hēisè|noir 的|de|(particule) 。", "Mon chien est noir."],
+["它|tā|il (animal) 很|hěn|très 大|dà|grand 。", "Il est très grand."],
+["它|tā|il (animal) 喜欢|xǐhuan|aimer 吃|chī|manger 鱼|yú|poisson 。", "Il aime manger du poisson."]]},
+{t:"Mes stylos",s:[["我|wǒ|je 有|yǒu|avoir 三|sān|trois 支|zhī|(classificateur : stylos) 笔|bǐ|stylo 。", "J'ai trois stylos."],
+["一|yì|un 支|zhī|(classificateur : stylos) 是|shì|être 红色|hóngsè|rouge 的|de|(particule) ， 两|liǎng|deux 支|zhī|(classificateur : stylos) 是|shì|être 蓝色|lánsè|bleu 的|de|(particule) 。", "Un est rouge, deux sont bleus."],
+["我|wǒ|je 喜欢|xǐhuan|aimer 蓝色|lánsè|bleu 。", "J'aime le bleu."]]},
+{t:"Les fleurs de couleur",s:[["我|wǒ|je 有|yǒu|avoir 五|wǔ|cinq 朵|duǒ|(classificateur : fleurs) 花|huā|fleur 。", "J'ai cinq fleurs."],
+["三|sān|trois 朵|duǒ|(classificateur : fleurs) 是|shì|être 红色|hóngsè|rouge 的|de|(particule) ， 两|liǎng|deux 朵|duǒ|(classificateur : fleurs) 是|shì|être 黄色|huángsè|jaune 的|de|(particule) 。", "Trois sont rouges, deux sont jaunes."],
+["花|huā|fleur 很|hěn|très 好看|hǎokàn|joli 。", "Les fleurs sont très jolies."]]},
+{t:"Il fait chaud",s:[["今天|jīntiān|aujourd'hui 很|hěn|très 热|rè|chaud 。", "Aujourd'hui, il fait très chaud."],
+["我|wǒ|je 喝|hē|boire 一|yì|un 杯|bēi|(classificateur : verre) 水|shuǐ|eau 。", "Je bois un verre d'eau."],
+["我|wǒ|je 不|bù|ne… pas 喜欢|xǐhuan|aimer 热|rè|chaud 。", "Je n'aime pas la chaleur."]]},
+{t:"Il fait froid",s:[["今天|jīntiān|aujourd'hui 很|hěn|très 冷|lěng|froid 。", "Aujourd'hui, il fait très froid."],
+["我|wǒ|je 有|yǒu|avoir 一|yí|une 件|jiàn|(classificateur : vêtements) 大|dà|grand 衣服|yīfu|vêtement 。", "J'ai un grand vêtement."],
+["我|wǒ|je 喝|hē|boire 一|yì|un 杯|bēi|(classificateur : verre) 热|rè|chaud 茶|chá|thé 。", "Je bois une tasse de thé chaud."]]},
+{t:"Il pleut",s:[["今天|jīntiān|aujourd'hui 下雨|xiàyǔ|il pleut 。", "Aujourd'hui, il pleut."],
+["我|wǒ|je 在|zài|être à 家|jiā|maison 。", "Je suis à la maison."],
+["我|wǒ|je 喝|hē|boire 茶|chá|thé ， 看|kàn|lire 书|shū|livre 。", "Je bois du thé et je lis."]]},
+{t:"Il fait beau",s:[["今天|jīntiān|aujourd'hui 天气|tiānqì|temps 很|hěn|très 好|hǎo|bon 。", "Aujourd'hui, il fait très beau."],
+["今天|jīntiān|aujourd'hui 有|yǒu|il y a 太阳|tàiyáng|soleil 。", "Aujourd'hui, il y a du soleil."],
+["我|wǒ|je 和|hé|et 朋友|péngyou|ami 去|qù|aller 市场|shìchǎng|marché 。", "Mon ami et moi allons au marché."]]},
+{t:"Quel temps ?",s:[["今天|jīntiān|aujourd'hui 天气|tiānqì|temps 好|hǎo|bon 吗|ma|(question) ？", "Fait-il beau aujourd'hui ?"],
+["很|hěn|très 好|hǎo|bon ！", "Très beau !"],
+["不|bù|ne… pas 冷|lěng|froid ， 也|yě|aussi 不|bú|ne… pas 热|rè|chaud 。", "Il ne fait ni froid ni chaud."]]},
+{t:"Ma journée",s:[["早上|zǎoshang|le matin ， 我|wǒ|je 吃|chī|manger 面包|miànbāo|pain 。", "Le matin, je mange du pain."],
+["下午|xiàwǔ|l'après-midi ， 我|wǒ|je 在|zài|être à 学校|xuéxiào|école 。", "L'après-midi, je suis à l'école."],
+["晚上|wǎnshang|le soir ， 我|wǒ|je 在|zài|être à 家|jiā|maison 看|kàn|lire 书|shū|livre 。", "Le soir, je lis à la maison."]]},
+{t:"Pékin · 北京",s:[["北京|Běijīng|Pékin 是|shì|être 中国|Zhōngguó|Chine 的|de|(particule) 首都|shǒudū|capitale 。", "Pékin est la capitale de la Chine."],
+["北京|Běijīng|Pékin 有|yǒu|il y a 故宫|Gùgōng|Cité interdite 和|hé|et 长城|Chángchéng|Grande Muraille 。", "À Pékin, il y a la Cité interdite et la Grande Muraille."],
+["我|wǒ|je 想|xiǎng|avoir envie de 去|qù|aller 北京|Běijīng|Pékin 。", "Je voudrais aller à Pékin."]]},
+{t:"Shanghai · 上海",s:[["上海|Shànghǎi|Shanghai 很|hěn|très 大|dà|grand ， 人|rén|gens 很|hěn|très 多|duō|nombreux 。", "Shanghai est grande, il y a beaucoup de monde."],
+["上海|Shànghǎi|Shanghai 有|yǒu|il y a 很多|hěn duō|beaucoup de 高楼|gāolóu|gratte-ciel 。", "À Shanghai, il y a beaucoup de gratte-ciel."],
+["外滩|Wàitān|le Bund 很|hěn|très 好看|hǎokàn|joli 。", "Le Bund est très joli."]]},
+{t:"Chengdu · 成都",s:[["成都|Chéngdū|Chengdu 有|yǒu|il y a 大熊猫|dàxióngmāo|panda géant 。", "À Chengdu, il y a des pandas géants."],
+["大熊猫|dàxióngmāo|panda géant 喜欢|xǐhuan|aimer 吃|chī|manger 竹子|zhúzi|bambou 。", "Les pandas géants aiment manger du bambou."],
+["成都|Chéngdū|Chengdu 的|de|(particule) 菜|cài|cuisine 很|hěn|très 辣|là|piquant 。", "La cuisine de Chengdu est très piquante."]]},
+{t:"Xi'an · 西安",s:[["西安|Xī'ān|Xi'an 有|yǒu|il y a 兵马俑|bīngmǎyǒng|armée de terre cuite 。", "À Xi'an, il y a l'armée de terre cuite."],
+["兵马俑|bīngmǎyǒng|armée de terre cuite 很|hěn|très 有名|yǒumíng|célèbre 。", "L'armée de terre cuite est très célèbre."],
+["很多|hěn duō|beaucoup de 人|rén|gens 去|qù|aller 西安|Xī'ān|Xi'an 。", "Beaucoup de gens vont à Xi'an."]]},
+{t:"Hangzhou · 杭州",s:[["杭州|Hángzhōu|Hangzhou 有|yǒu|il y a 西湖|Xīhú|lac de l'Ouest 。", "À Hangzhou, il y a le lac de l'Ouest."],
+["西湖|Xīhú|lac de l'Ouest 很|hěn|très 好看|hǎokàn|joli 。", "Le lac de l'Ouest est très joli."],
+["阿里巴巴|Ālǐbābā|Alibaba 在|zài|être à 杭州|Hángzhōu|Hangzhou 。", "Alibaba est à Hangzhou."]]},
+{t:"Shenzhen · 深圳",s:[["深圳|Shēnzhèn|Shenzhen 是|shì|être 一|yí|un 个|gè|(classificateur général) 大|dà|grand 城市|chéngshì|ville 。", "Shenzhen est une grande ville."],
+["华为|Huáwéi|Huawei 和|hé|et 腾讯|Téngxùn|Tencent 在|zài|être à 深圳|Shēnzhèn|Shenzhen 。", "Huawei et Tencent sont à Shenzhen."],
+["深圳|Shēnzhèn|Shenzhen 的|de|(particule) 公司|gōngsī|entreprise 很|hěn|très 多|duō|nombreux 。", "Il y a beaucoup d'entreprises à Shenzhen."]]},
+{t:"Canton · 广州",s:[["广州|Guǎngzhōu|Canton 的|de|(particule) 菜|cài|cuisine 很|hěn|très 好吃|hǎochī|délicieux 。", "La cuisine de Canton est délicieuse."],
+["早上|zǎoshang|le matin ， 我|wǒ|je 喝|hē|boire 茶|chá|thé ， 吃|chī|manger 点心|diǎnxin|dim sum 。", "Le matin, je bois du thé et je mange des dim sum."],
+["我|wǒ|je 喜欢|xǐhuan|aimer 广州|Guǎngzhōu|Canton 。", "J'aime Canton."]]},
+{t:"Harbin · 哈尔滨",s:[["哈尔滨|Hā'ěrbīn|Harbin 的|de|(particule) 冬天|dōngtiān|hiver 很|hěn|très 冷|lěng|froid 。", "L'hiver à Harbin est très froid."],
+["那里|nàlǐ|là-bas 有|yǒu|il y a 很多|hěn duō|beaucoup de 冰|bīng|glace 和|hé|et 雪|xuě|neige 。", "Là-bas, il y a beaucoup de glace et de neige."],
+["我|wǒ|je 想|xiǎng|avoir envie de 看|kàn|regarder 冰灯|bīngdēng|lanternes de glace 。", "Je voudrais voir les lanternes de glace."]]},
+{t:"Chongqing · 重庆",s:[["重庆|Chóngqìng|Chongqing 有|yǒu|il y a 很多|hěn duō|beaucoup de 山|shān|montagne 。", "À Chongqing, il y a beaucoup de montagnes."],
+["重庆|Chóngqìng|Chongqing 的|de|(particule) 火锅|huǒguō|fondue chinoise 很|hěn|très 辣|là|piquant 。", "La fondue de Chongqing est très piquante."],
+["我|wǒ|je 不|bù|ne… pas 喜欢|xǐhuan|aimer 辣|là|piquant 。", "Je n'aime pas le piquant."]]},
+{t:"Guilin · 桂林",s:[["桂林|Guìlín|Guilin 的|de|(particule) 山水|shānshuǐ|paysages 很|hěn|très 好看|hǎokàn|joli 。", "Les paysages de Guilin sont très beaux."],
+["山|shān|montagne 很|hěn|très 高|gāo|haut 。", "Les montagnes sont hautes."],
+["我|wǒ|je 想|xiǎng|avoir envie de 去|qù|aller 桂林|Guìlín|Guilin 看|kàn|regarder 山|shān|montagne 。", "Je voudrais aller à Guilin voir les montagnes."]]},
+{t:"Huawei · 华为",s:[["华为|Huáwéi|Huawei 是|shì|être 一|yì|un 家|jiā|(classificateur : entreprises) 公司|gōngsī|entreprise 。", "Huawei est une entreprise."],
+["华为|Huáwéi|Huawei 做|zuò|fabriquer 手机|shǒujī|téléphone 。", "Huawei fabrique des téléphones."],
+["我|wǒ|je 的|de|(particule) 朋友|péngyou|ami 有|yǒu|avoir 一|yí|un 部|bù|(classificateur : téléphones, films) 手机|shǒujī|téléphone 。", "Mon ami a un téléphone."]]},
+{t:"WeChat · 微信",s:[["微信|Wēixìn|WeChat 是|shì|être 一|yí|un 个|gè|(classificateur général) 软件|ruǎnjiàn|appli 。", "WeChat est une appli."],
+["腾讯|Téngxùn|Tencent 有|yǒu|avoir 微信|Wēixìn|WeChat 。", "Tencent a WeChat."],
+["在|zài|être à 中国|Zhōngguó|Chine ， 很多|hěn duō|beaucoup de 人|rén|gens 用|yòng|utiliser 微信|Wēixìn|WeChat 。", "En Chine, beaucoup de gens utilisent WeChat."]]},
+{t:"Alibaba · 阿里巴巴",s:[["阿里巴巴|Ālǐbābā|Alibaba 是|shì|être 一|yì|un 家|jiā|(classificateur : entreprises) 大|dà|grand 公司|gōngsī|entreprise 。", "Alibaba est une grande entreprise."],
+["淘宝|Táobǎo|Taobao 是|shì|être 阿里巴巴|Ālǐbābā|Alibaba 的|de|(particule) 网站|wǎngzhàn|site web 。", "Taobao est un site d'Alibaba."],
+["我|wǒ|je 在|zài|être à 网上|wǎngshàng|en ligne 买|mǎi|acheter 东西|dōngxi|choses 。", "J'achète des choses en ligne."]]},
+{t:"Baidu · 百度",s:[["百度|Bǎidù|Baidu 是|shì|être 一|yì|un 家|jiā|(classificateur : entreprises) 中国|Zhōngguó|Chine 公司|gōngsī|entreprise 。", "Baidu est une entreprise chinoise."],
+["你|nǐ|tu 可以|kěyǐ|pouvoir 用|yòng|utiliser 百度|Bǎidù|Baidu 搜索|sōusuǒ|chercher 。", "Tu peux chercher avec Baidu."],
+["百度|Bǎidù|Baidu 在|zài|être à 北京|Běijīng|Pékin 。", "Baidu est à Pékin."]]},
+{t:"Xiaomi · 小米",s:[["小米|Xiǎomǐ|Xiaomi 是|shì|être 一|yì|un 家|jiā|(classificateur : entreprises) 公司|gōngsī|entreprise 。", "Xiaomi est une entreprise."],
+["小米|Xiǎomǐ|Xiaomi 做|zuò|fabriquer 手机|shǒujī|téléphone 。", "Xiaomi fabrique des téléphones."],
+["你|nǐ|tu 有|yǒu|avoir 手机|shǒujī|téléphone 吗|ma|(question) ？", "As-tu un téléphone ?"]]},
+{t:"BYD · 比亚迪",s:[["比亚迪|Bǐyàdí|BYD 做|zuò|fabriquer 汽车|qìchē|voiture 。", "BYD fabrique des voitures."],
+["它|tā|elle (entreprise) 也|yě|aussi 做|zuò|fabriquer 电动|diàndòng|électrique 汽车|qìchē|voiture 。", "Elle fabrique aussi des voitures électriques."],
+["比亚迪|Bǐyàdí|BYD 在|zài|être à 深圳|Shēnzhèn|Shenzhen 。", "BYD est à Shenzhen."]]},
+{t:"Meituan · 美团",s:[["美团|Měituán|Meituan 是|shì|être 一|yí|un 个|gè|(classificateur général) 软件|ruǎnjiàn|appli 。", "Meituan est une appli."],
+["你|nǐ|tu 可以|kěyǐ|pouvoir 点|diǎn|commander 外卖|wàimài|repas livré 。", "Tu peux commander des repas livrés."],
+["外卖|wàimài|repas livré 来|lái|venir 了|le|(accompli) ！", "Le repas est arrivé !"]]},
+{t:"Didi · 滴滴",s:[["滴滴|Dīdī|Didi 是|shì|être 一|yí|un 个|gè|(classificateur général) 软件|ruǎnjiàn|appli 。", "Didi est une appli."],
+["你|nǐ|tu 可以|kěyǐ|pouvoir 打车|dǎchē|prendre un taxi 。", "Tu peux prendre un taxi."],
+["我|wǒ|je 坐|zuò|prendre (un transport) 出租车|chūzūchē|taxi 去|qù|aller 学校|xuéxiào|école 。", "Je prends un taxi pour aller à l'école."]]},
+{t:"Confucius · 孔子",s:[["孔子|Kǒngzǐ|Confucius 是|shì|être 一|yí|un 位|wèi|(classificateur : personnes, poli) 老师|lǎoshī|professeur 。", "Confucius était un professeur."],
+["他|tā|il 有|yǒu|avoir 很多|hěn duō|beaucoup de 学生|xuésheng|élève 。", "Il avait beaucoup d'élèves."],
+["他|tā|il 很|hěn|très 有名|yǒumíng|célèbre 。", "Il est très célèbre."]]},
+{t:"Laozi · 老子",s:[["老子|Lǎozǐ|Laozi 写|xiě|écrire 了|le|(accompli) 一|yì|un 本|běn|(classificateur : livres) 书|shū|livre 。", "Laozi a écrit un livre."],
+["那|nà|ce (là) 本|běn|(classificateur : livres) 书|shū|livre 叫|jiào|s'appeler 道德经|Dàodéjīng|Daodejing 。", "Ce livre s'appelle le Daodejing."],
+["很多|hěn duō|beaucoup de 人|rén|gens 看|kàn|regarder 这|zhè|ce 本|běn|(classificateur : livres) 书|shū|livre 。", "Beaucoup de gens lisent ce livre."]]},
+{t:"Li Bai · 李白",s:[["李白|Lǐ Bái|Li Bai 是|shì|être 一|yí|un 位|wèi|(classificateur : personnes, poli) 诗人|shīrén|poète 。", "Li Bai était un poète."],
+["他|tā|il 写|xiě|écrire 了|le|(accompli) 很多|hěn duō|beaucoup de 诗|shī|poème 。", "Il a écrit beaucoup de poèmes."],
+["很多|hěn duō|beaucoup de 中国人|Zhōngguórén|Chinois 喜欢|xǐhuan|aimer 他|tā|il 的|de|(particule) 诗|shī|poème 。", "Beaucoup de Chinois aiment ses poèmes."]]},
+{t:"Qin Shi Huang · 秦始皇",s:[["秦始皇|Qín Shǐhuáng|Qin Shi Huang 是|shì|être 中国|Zhōngguó|Chine 的|de|(particule) 第一|dì yī|premier 个|gè|(classificateur général) 皇帝|huángdì|empereur 。", "Qin Shi Huang est le premier empereur de Chine."],
+["他|tā|il 的|de|(particule) 兵马俑|bīngmǎyǒng|armée de terre cuite 在|zài|être à 西安|Xī'ān|Xi'an 。", "Son armée de terre cuite est à Xi'an."],
+["很多|hěn duō|beaucoup de 人|rén|gens 去|qù|aller 看|kàn|regarder 兵马俑|bīngmǎyǒng|armée de terre cuite 。", "Beaucoup de gens vont voir l'armée de terre cuite."]]},
+{t:"Zheng He · 郑和",s:[["郑和|Zhèng Hé|Zheng He 有|yǒu|avoir 很多|hěn duō|beaucoup de 大|dà|grand 船|chuán|bateau 。", "Zheng He avait beaucoup de grands bateaux."],
+["他|tā|il 去|qù|aller 了|le|(accompli) 很多|hěn duō|beaucoup de 地方|dìfang|endroits 。", "Il est allé dans beaucoup d'endroits."],
+["他|tā|il 很|hěn|très 有名|yǒumíng|célèbre 。", "Il est très célèbre."]]},
+{t:"Yao Ming · 姚明",s:[["姚明|Yáo Míng|Yao Ming 很|hěn|très 高|gāo|haut 。", "Yao Ming est très grand."],
+["他|tā|il 打|dǎ|jouer à 篮球|lánqiú|basket 。", "Il joue au basket."],
+["他|tā|il 在|zài|être à 美国|Měiguó|États-Unis 打|dǎ|jouer à 篮球|lánqiú|basket 。", "Il a joué au basket aux États-Unis."]]},
+{t:"Jackie Chan · 成龙",s:[["成龙|Chéng Lóng|Jackie Chan 是|shì|être 演员|yǎnyuán|acteur 。", "Jackie Chan est acteur."],
+["他|tā|il 会|huì|savoir faire 功夫|gōngfu|kung-fu 。", "Il sait faire du kung-fu."],
+["他|tā|il 的|de|(particule) 电影|diànyǐng|film 很|hěn|très 有名|yǒumíng|célèbre 。", "Ses films sont très célèbres."]]},
+{t:"Bruce Lee · 李小龙",s:[["李小龙|Lǐ Xiǎolóng|Bruce Lee 是|shì|être 功夫|gōngfu|kung-fu 演员|yǎnyuán|acteur 。", "Bruce Lee était un acteur de kung-fu."],
+["他|tā|il 的|de|(particule) 电影|diànyǐng|film 很|hěn|très 有名|yǒumíng|célèbre 。", "Ses films sont très célèbres."],
+["很多|hěn duō|beaucoup de 人|rén|gens 喜欢|xǐhuan|aimer 看|kàn|regarder 他|tā|il 的|de|(particule) 电影|diànyǐng|film 。", "Beaucoup de gens aiment voir ses films."]]},
+{t:"Lang Lang · 郎朗",s:[["郎朗|Láng Lǎng|Lang Lang 是|shì|être 一|yí|un 位|wèi|(classificateur : personnes, poli) 钢琴家|gāngqínjiā|pianiste 。", "Lang Lang est un pianiste."],
+["他|tā|il 弹|tán|jouer (du piano) 钢琴|gāngqín|piano 。", "Il joue du piano."],
+["我|wǒ|je 喜欢|xǐhuan|aimer 听|tīng|écouter 钢琴|gāngqín|piano 。", "J'aime écouter du piano."]]},
+{t:"Eileen Gu · 谷爱凌",s:[["谷爱凌|Gǔ Àilíng|Eileen Gu 是|shì|être 运动员|yùndòngyuán|sportif 。", "Eileen Gu est une sportive."],
+["她|tā|elle 喜欢|xǐhuan|aimer 滑雪|huáxuě|skier 。", "Elle aime skier."],
+["她|tā|elle 在|zài|être à 北京|Běijīng|Pékin 得到|dédào|obtenir 了|le|(accompli) 金牌|jīnpái|médaille d'or 。", "Elle a obtenu une médaille d'or à Pékin."]]},
+{t:"Tu Youyou · 屠呦呦",s:[["屠呦呦|Tū Yōuyōu|Tu Youyou 是|shì|être 一|yí|un 位|wèi|(classificateur : personnes, poli) 科学家|kēxuéjiā|scientifique 。", "Tu Youyou est une scientifique."],
+["她|tā|elle 得到|dédào|obtenir 了|le|(accompli) 诺贝尔奖|Nuòbèi'ěr jiǎng|prix Nobel 。", "Elle a obtenu le prix Nobel."],
+["她|tā|elle 是|shì|être 中国人|Zhōngguórén|Chinois 。", "Elle est chinoise."]]},
+{t:"Jack Ma · 马云",s:[["马云|Mǎ Yún|Jack Ma 以前|yǐqián|avant 是|shì|être 英语|Yīngyǔ|anglais 老师|lǎoshī|professeur 。", "Jack Ma était professeur d'anglais."],
+["后来|hòulái|plus tard ， 他|tā|il 有|yǒu|avoir 了|le|(accompli) 一|yì|un 家|jiā|(classificateur : entreprises) 公司|gōngsī|entreprise 。", "Plus tard, il a eu une entreprise."],
+["那|nà|ce (là) 家|jiā|(classificateur : entreprises) 公司|gōngsī|entreprise 叫|jiào|s'appeler 阿里巴巴|Ālǐbābā|Alibaba 。", "Cette entreprise s'appelle Alibaba."]]},
+{t:"Mon corps (1)",s:[["我|wǒ|je 有|yǒu|avoir 一|yí|un 个|gè|(classificateur général) 头|tóu|tête 。", "J'ai une tête."],
+["我|wǒ|je 有|yǒu|avoir 两|liǎng|deux 只|zhī|(classificateur : animaux, membres) 眼睛|yǎnjing|yeux 。", "J'ai deux yeux."],
+["我|wǒ|je 有|yǒu|avoir 一|yì|un 张|zhāng|(classificateur : bouche, feuilles) 嘴|zuǐ|bouche 。", "J'ai une bouche."]]},
+{t:"Mon corps (2)",s:[["我|wǒ|je 有|yǒu|avoir 两|liǎng|deux 只|zhī|(classificateur : animaux, membres) 手|shǒu|main 。", "J'ai deux mains."],
+["我|wǒ|je 有|yǒu|avoir 两|liǎng|deux 只|zhī|(classificateur : animaux, membres) 脚|jiǎo|pied 。", "J'ai deux pieds."],
+["我|wǒ|je 有|yǒu|avoir 两|liǎng|deux 只|zhī|(classificateur : animaux, membres) 耳朵|ěrduo|oreille 。", "J'ai deux oreilles."]]},
+{t:"Les transports (1)",s:[["我|wǒ|je 坐|zuò|prendre (un transport) 地铁|dìtiě|métro 去|qù|aller 学校|xuéxiào|école 。", "Je prends le métro pour aller à l'école."],
+["我|wǒ|je 的|de|(particule) 朋友|péngyou|ami 坐|zuò|prendre (un transport) 公共汽车|gōnggòng qìchē|bus 。", "Mon ami prend le bus."],
+["我们|wǒmen|nous 都|dōu|tous 喜欢|xǐhuan|aimer 坐|zuò|prendre (un transport) 火车|huǒchē|train 。", "Nous aimons tous prendre le train."]]},
+{t:"Les transports (2)",s:[["他|tā|il 骑|qí|rouler à (vélo) 自行车|zìxíngchē|vélo 。", "Il fait du vélo."],
+["她|tā|elle 开|kāi|conduire 汽车|qìchē|voiture 。", "Elle conduit une voiture."],
+["我|wǒ|je 走路|zǒulù|marcher 去|qù|aller 市场|shìchǎng|marché 。", "J'y vais à pied, au marché."]]},
+{t:"Mes loisirs",s:[["我|wǒ|je 喜欢|xǐhuan|aimer 听|tīng|écouter 音乐|yīnyuè|musique 。", "J'aime écouter de la musique."],
+["我|wǒ|je 喜欢|xǐhuan|aimer 唱歌|chànggē|chanter 。", "J'aime chanter."],
+["我|wǒ|je 的|de|(particule) 朋友|péngyou|ami 喜欢|xǐhuan|aimer 跑步|pǎobù|courir 。", "Mon ami aime courir."]]},
+{t:"À la piscine",s:[["我|wǒ|je 会|huì|savoir faire 游泳|yóuyǒng|nager 。", "Je sais nager."],
+["他|tā|il 不|bú|ne… pas 会|huì|savoir faire 游泳|yóuyǒng|nager 。", "Il ne sait pas nager."],
+["我们|wǒmen|nous 在|zài|être à 学校|xuéxiào|école 游泳|yóuyǒng|nager 。", "Nous nageons à l'école."]]},
+{t:"La semaine",s:[["星期一|xīngqīyī|lundi ， 我|wǒ|je 去|qù|aller 学校|xuéxiào|école 。", "Le lundi, je vais à l'école."],
+["星期六|xīngqīliù|samedi ， 我|wǒ|je 在|zài|être à 家|jiā|maison 。", "Le samedi, je suis à la maison."],
+["星期天|xīngqītiān|dimanche ， 我|wǒ|je 去|qù|aller 市场|shìchǎng|marché 。", "Le dimanche, je vais au marché."]]},
+{t:"Demain",s:[["今天|jīntiān|aujourd'hui 是|shì|être 星期六|xīngqīliù|samedi 。", "Aujourd'hui, c'est samedi."],
+["明天|míngtiān|demain 是|shì|être 星期天|xīngqītiān|dimanche 。", "Demain, c'est dimanche."],
+["明天|míngtiān|demain ， 我|wǒ|je 去|qù|aller 看|kàn|regarder 朋友|péngyou|ami 。", "Demain, je vais voir un ami."]]},
+{t:"Voyage en Chine",s:[["我|wǒ|je 想|xiǎng|avoir envie de 去|qù|aller 中国|Zhōngguó|Chine 。", "Je voudrais aller en Chine."],
+["我|wǒ|je 坐|zuò|prendre (un transport) 飞机|fēijī|avion 去|qù|aller 北京|Běijīng|Pékin 。", "Je prends l'avion pour Pékin."],
+["在|zài|être à 北京|Běijīng|Pékin ， 我|wǒ|je 吃|chī|manger 烤鸭|kǎoyā|canard laqué 。", "À Pékin, je mange du canard laqué."]]},
+{t:"Le téléphone en Chine",s:[["在|zài|être à 中国|Zhōngguó|Chine ， 很多|hěn duō|beaucoup de 人|rén|gens 用|yòng|utiliser 手机|shǒujī|téléphone 。", "En Chine, beaucoup de gens utilisent leur téléphone."],
+["他们|tāmen|ils 用|yòng|utiliser 微信|Wēixìn|WeChat 买|mǎi|acheter 东西|dōngxi|choses 。", "Ils utilisent WeChat pour acheter des choses."],
+["我|wǒ|je 也|yě|aussi 想|xiǎng|avoir envie de 用|yòng|utiliser 微信|Wēixìn|WeChat 。", "Moi aussi, je voudrais utiliser WeChat."]]}
 ];
 
 const K="lecture-mandarin-v1";
@@ -174,6 +427,8 @@ const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}};
 const dayKey=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
 const dayNum=d=>Math.floor((Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()))/864e5);
 const today=new Date();let off=0;
+if(!S.start){S.start=dayKey(today);save()}
+function startDate(){const p=S.start.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
 const $=id=>document.getElementById(id);
 let showFr=false,showPy=true;
 
@@ -189,12 +444,18 @@ function speak(txt,rate){
   const v=speechSynthesis.getVoices().find(v=>/zh[-_]CN/i.test(v.lang))||speechSynthesis.getVoices().find(v=>/^zh/i.test(v.lang));
   if(v)u.voice=v;speechSynthesis.speak(u);
 }
-const plain=s=>s.split(" ").map(t=>t.split("|")[0]).join("");
+function parseRaw(raw){
+  const re=/([，。！？、；：])|([^\s|，。！？、；：]+)\|([^|]*)\|(.*?)(?=\s+[^\s|]+\||\s+[，。！？、；：]|\s*$)/g;
+  const out=[];let m;
+  while((m=re.exec(raw))){out.push(m[1]?[m[1]]:[m[2],m[3].trim(),m[4].trim()])}
+  return out;
+}
+const plain=s=>parseRaw(s).map(p=>p[0]).join("");
 
 function render(){
   const d=cur(),k=dayKey(d),i=curIdx(),x=T[i];
   $("title").textContent=x.t;
-  $("date").textContent=d.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"});
+  $("date").textContent=d.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"})+" · texte "+(i+1)+"/"+T.length;
   $("pos").textContent=off===0?"Aujourd'hui":(off<0?"−"+(-off)+" j":"+"+off+" j");
   $("next").style.visibility=off>=0?"hidden":"visible";
   $("tip").style.display="none";
@@ -202,9 +463,8 @@ function render(){
   x.s.forEach(([raw,fr])=>{
     const c=document.createElement("div");c.className="sent";
     const l=document.createElement("div");l.className="line";
-    raw.split(" ").forEach(t=>{
-      const p=t.split("|");
-      if(p.length<3){const e=document.createElement("span");e.className="p";e.textContent=t;l.appendChild(e);return}
+    parseRaw(raw).forEach(p=>{
+      if(p.length<3){const e=document.createElement("span");e.className="p";e.textContent=p[0];l.appendChild(e);return}
       const w=document.createElement("div");w.className="w";
       w.innerHTML='<span class="py">'+p[1]+'</span><span class="hz">'+p[0]+'</span>';
       w.onclick=()=>{document.querySelectorAll(".w.on").forEach(e=>e.classList.remove("on"));w.classList.add("on");
@@ -264,9 +524,14 @@ const ITM=[
 {h:"花",p:"huā",c:"朵",cp:"duǒ",y:"yì",g:"f",e:"🌸",f1:"une fleur",fp:"fleurs"},
 {h:"椅子",p:"yǐzi",c:"把",cp:"bǎ",y:"yì",g:"f",e:"🪑",f1:"une chaise",fp:"chaises"},
 {h:"汽车",p:"qìchē",c:"辆",cp:"liàng",y:"yí",g:"f",e:"🚗",f1:"une voiture",fp:"voitures"},
-{h:"衣服",p:"yīfu",c:"件",cp:"jiàn",y:"yí",g:"m",e:"👕",f1:"un vêtement",fp:"vêtements"}];
+{h:"衣服",p:"yīfu",c:"件",cp:"jiàn",y:"yí",g:"m",e:"👕",f1:"un vêtement",fp:"vêtements"},
+{h:"公司",p:"gōngsī",c:"家",cp:"jiā",y:"yì",g:"f",e:"🏢",f1:"une entreprise",fp:"entreprises"},
+{h:"老师",p:"lǎoshī",c:"位",cp:"wèi",y:"yí",g:"m",e:"🧑‍🏫",f1:"un professeur",fp:"professeurs"},
+{h:"山",p:"shān",c:"座",cp:"zuò",y:"yí",g:"f",e:"⛰️",f1:"une montagne",fp:"montagnes"},
+{h:"手机",p:"shǒujī",c:"部",cp:"bù",y:"yí",g:"m",e:"📱",f1:"un téléphone",fp:"téléphones"},
+{h:"电影",p:"diànyǐng",c:"部",cp:"bù",y:"yí",g:"m",e:"🎬",f1:"un film",fp:"films"}];
 const CLS=[...new Map(ITM.map(x=>[x.c,[x.c,x.cp]])).values()];
-const CUE={"个":"général : pommes, personnes, œufs…","本":"livres, cahiers","只":"animaux","杯":"verre ou tasse","张":"objets plats : feuilles, tables","支":"objets longs et fins : stylos","条":"long et souple : poissons","朵":"fleurs","把":"objets avec une poignée : chaises","辆":"véhicules","件":"vêtements"};
+const CUE={"个":"général : pommes, personnes, œufs…","本":"livres, cahiers","只":"animaux","杯":"verre ou tasse","张":"objets plats : feuilles, tables","支":"objets longs et fins : stylos","条":"long et souple : poissons","朵":"fleurs","把":"objets avec une poignée : chaises","辆":"véhicules","件":"vêtements","家":"entreprises, magasins","位":"personnes (poli)","座":"montagnes, ponts, grands bâtiments","部":"téléphones, films"};
 const DG=["","一","二","三","四","五","六","七","八","九"],PG=["","yī","èr","sān","sì","wǔ","liù","qī","bā","jiǔ"];
 function numZh(n,it){
   if(n===1)return ["一",it.y];
@@ -329,11 +594,11 @@ function chip(a,b,on,fn){const e=document.createElement("button");e.className="c
   e.innerHTML='<div class="c1">'+a+'</div><div class="c2">'+b+'</div>';e.onclick=fn;return e}
 function bGo(f){f();bRender();speak(gen(B).hz)}
 function bRender(){
-  const r=gen(B),line=$("bline");line.innerHTML="";
+  const r=gen(B),line=$("bline");line.innerHTML="";line.className="line"+(r.parts.length>=5?" s5":"");
   r.parts.forEach(p=>{const w=document.createElement("div");w.className="w"+(p[2]==="CL"?" cl":"");
     w.innerHTML='<span class="py">'+p[1]+'</span><span class="hz">'+p[0]+'</span>';
     w.onclick=()=>speak(p[0],.7);line.appendChild(w)});
-  const d=document.createElement("span");d.className="p";d.style.fontSize="46px";d.textContent="。";line.appendChild(d);
+  const d=document.createElement("span");d.className="p";d.textContent="。";line.appendChild(d);
   $("btr").textContent=r.fr;
   $("bemo").textContent=B.m===2?(B.n<=20?ITM[B.i].e.repeat(B.n):ITM[B.i].e+" × "+B.n):"";
   ["mA","mE","mC"].forEach((id,i)=>$(id).classList.toggle("on",B.m===i));
@@ -434,19 +699,256 @@ function pPick(c){
   }
 }
 $("pnext").onclick=pNew;
+const NM={"v": [["北京", "Běijīng", "Pékin", "🏯", "capitale"], ["上海", "Shànghǎi", "Shanghai", "🌆", "très grande ville"], ["广州", "Guǎngzhōu", "Canton", "🥟", "cuisine cantonaise"], ["深圳", "Shēnzhèn", "Shenzhen", "🏙️", "ville des entreprises de tech"], ["成都", "Chéngdū", "Chengdu", "🐼", "pandas et cuisine piquante"], ["西安", "Xī'ān", "Xi'an", "🏺", "armée de terre cuite"], ["杭州", "Hángzhōu", "Hangzhou", "🛶", "lac de l'Ouest"], ["重庆", "Chóngqìng", "Chongqing", "🌶️", "ville de montagnes, fondue"], ["哈尔滨", "Hā'ěrbīn", "Harbin", "❄️", "glace et neige en hiver"], ["桂林", "Guìlín", "Guilin", "⛰️", "paysages de montagnes et de rivières"], ["香港", "Xiānggǎng", "Hong Kong", "🌃", "grand port, gratte-ciel"], ["南京", "Nánjīng", "Nankin", "🏛️", "ancienne capitale"], ["苏州", "Sūzhōu", "Suzhou", "🌸", "jardins classiques"], ["青岛", "Qīngdǎo", "Qingdao", "🌊", "au bord de la mer"]], "e": [["华为", "Huáwéi", "Huawei", "📱", "téléphones, réseaux"], ["腾讯", "Téngxùn", "Tencent", "💬", "WeChat (微信)"], ["阿里巴巴", "Ālǐbābā", "Alibaba", "🛒", "commerce en ligne (淘宝)"], ["百度", "Bǎidù", "Baidu", "🔍", "moteur de recherche"], ["小米", "Xiǎomǐ", "Xiaomi", "📲", "téléphones, objets connectés"], ["比亚迪", "Bǐyàdí", "BYD", "🚗", "voitures électriques"], ["美团", "Měituán", "Meituan", "🛵", "livraison de repas"], ["滴滴", "Dīdī", "Didi", "🚕", "appli de taxi"], ["字节跳动", "Zìjié Tiàodòng", "ByteDance", "🎵", "TikTok (抖音)"], ["京东", "Jīngdōng", "JD.com", "📦", "commerce en ligne"], ["联想", "Liánxiǎng", "Lenovo", "💻", "ordinateurs"], ["海尔", "Hǎi'ěr", "Haier", "🧊", "électroménager"]], "p": [["孔子", "Kǒngzǐ", "Confucius", "📜", "philosophe et maître"], ["老子", "Lǎozǐ", "Laozi", "🌀", "Daodejing"], ["李白", "Lǐ Bái", "Li Bai", "🌙", "poète des Tang"], ["杜甫", "Dù Fǔ", "Du Fu", "🖋️", "poète des Tang"], ["秦始皇", "Qín Shǐhuáng", "Qin Shi Huang", "👑", "premier empereur de Chine"], ["郑和", "Zhèng Hé", "Zheng He", "⛵", "amiral, grands voyages en mer"], ["姚明", "Yáo Míng", "Yao Ming", "🏀", "basketteur, NBA"], ["成龙", "Chéng Lóng", "Jackie Chan", "🥋", "acteur, films de kung-fu"], ["李小龙", "Lǐ Xiǎolóng", "Bruce Lee", "🐉", "acteur, arts martiaux"], ["郎朗", "Láng Lǎng", "Lang Lang", "🎹", "pianiste"], ["屠呦呦", "Tū Yōuyōu", "Tu Youyou", "🔬", "prix Nobel de médecine 2015"], ["莫言", "Mò Yán", "Mo Yan", "📚", "prix Nobel de littérature 2012"], ["谷爱凌", "Gǔ Àilíng", "Eileen Gu", "⛷️", "skieuse, championne olympique 2022"], ["李娜", "Lǐ Nà", "Li Na", "🎾", "tenniseuse, Roland-Garros 2011"], ["马云", "Mǎ Yún", "Jack Ma", "💼", "cofondateur d'Alibaba"]]};
+let nk="v";
+function nRender(){
+  const L=$("nlist");L.innerHTML="";
+  NM[nk].forEach(x=>{const b=document.createElement("button");b.className="ncard";
+    b.innerHTML='<span class="nm">'+x[3]+'</span><span><div class="nh">'+x[0]+'</div><div class="np">'+x[1]+'</div></span><span class="nr"><div><b>'+x[2]+'</b></div><div class="nf">'+x[4]+'</div></span>';
+    b.onclick=()=>{document.querySelectorAll(".ncard.on").forEach(e=>e.classList.remove("on"));b.classList.add("on");speak(x[0],.7)};
+    L.appendChild(b)});
+  ["v","e","p"].forEach(k=>$("ns"+k).classList.toggle("on",k===nk));
+}
+$("nsv").onclick=()=>{nk="v";nRender()};$("nse").onclick=()=>{nk="e";nRender()};$("nsp").onclick=()=>{nk="p";nRender()};
+const TR=[{"g": "Bases", "e": "👋", "p": [["你好！", "Nǐ hǎo!", "Bonjour !"], ["你好吗？", "Nǐ hǎo ma?", "Comment vas-tu ?"], ["谢谢！", "Xièxie!", "Merci !"], ["不客气。", "Bú kèqi.", "De rien."], ["对不起。", "Duìbuqǐ.", "Pardon, désolé."], ["没关系。", "Méi guānxi.", "Ce n'est pas grave."], ["你叫什么名字？", "Nǐ jiào shénme míngzi?", "Comment t'appelles-tu ?"], ["很高兴认识你。", "Hěn gāoxìng rènshi nǐ.", "Enchanté(e)."], ["再见！", "Zàijiàn!", "Au revoir !"]]}, {"g": "Comprendre", "e": "👂", "p": [["我会说一点中文。", "Wǒ huì shuō yìdiǎn Zhōngwén.", "Je parle un peu chinois."], ["我听不懂。", "Wǒ tīng bu dǒng.", "Je ne comprends pas."], ["请再说一遍。", "Qǐng zài shuō yí biàn.", "Pouvez-vous répéter ?"], ["请说慢一点。", "Qǐng shuō màn yìdiǎn.", "Parlez plus lentement, s'il vous plaît."], ["你会说英语吗？", "Nǐ huì shuō Yīngyǔ ma?", "Parlez-vous anglais ?"], ["这个用中文怎么说？", "Zhège yòng Zhōngwén zěnme shuō?", "Comment dit-on ceci en chinois ?"]]}, {"g": "Manger", "e": "🍜", "p": [["一位。", "Yí wèi.", "Une personne (table pour un)."], ["请给我菜单。", "Qǐng gěi wǒ càidān.", "Le menu, s'il vous plaît."], ["我要这个。", "Wǒ yào zhège.", "Je prends ça."], ["我不吃辣。", "Wǒ bù chī là.", "Je ne mange pas de piquant."], ["我吃素。", "Wǒ chī sù.", "Je suis végétarien(ne)."], ["我要一杯水。", "Wǒ yào yì bēi shuǐ.", "Je voudrais un verre d'eau."], ["很好吃！", "Hěn hǎochī!", "C'est délicieux !"], ["买单。", "Mǎidān.", "L'addition, s'il vous plaît."]]}, {"g": "Chemin", "e": "🧭", "p": [["请问，洗手间在哪里？", "Qǐngwèn, xǐshǒujiān zài nǎlǐ?", "Où sont les toilettes ?"], ["请问，地铁站在哪里？", "Qǐngwèn, dìtiězhàn zài nǎlǐ?", "Où est la station de métro ?"], ["火车站在哪里？", "Huǒchēzhàn zài nǎlǐ?", "Où est la gare ?"], ["离这里远吗？", "Lí zhèlǐ yuǎn ma?", "C'est loin d'ici ?"], ["一直走。", "Yìzhí zǒu.", "Tout droit."], ["往左拐。", "Wǎng zuǒ guǎi.", "Tournez à gauche."], ["往右拐。", "Wǎng yòu guǎi.", "Tournez à droite."]]}, {"g": "Payer", "e": "💳", "p": [["多少钱？", "Duōshao qián?", "Combien ça coûte ?"], ["太贵了！", "Tài guì le!", "C'est trop cher !"], ["可以便宜一点吗？", "Kěyǐ piányi yìdiǎn ma?", "Pouvez-vous baisser un peu le prix ?"], ["我要两个。", "Wǒ yào liǎng ge.", "J'en prends deux."], ["可以刷卡吗？", "Kěyǐ shuā kǎ ma?", "Je peux payer par carte ?"], ["可以用支付宝吗？", "Kěyǐ yòng Zhīfùbǎo ma?", "Je peux payer avec Alipay ?"], ["可以用微信支付吗？", "Kěyǐ yòng Wēixìn zhīfù ma?", "Je peux payer avec WeChat Pay ?"], ["不用了，谢谢。", "Bú yòng le, xièxie.", "Non merci, ça ira."]]}, {"g": "Transports", "e": "🚆", "p": [["请去机场。", "Qǐng qù jīchǎng.", "À l'aéroport, s'il vous plaît."], ["请到这里。", "Qǐng dào zhèlǐ.", "Ici, s'il vous plaît (en montrant l'adresse)."], ["请在这里停车。", "Qǐng zài zhèlǐ tíngchē.", "Arrêtez-vous ici, s'il vous plaît."], ["我要买一张去上海的票。", "Wǒ yào mǎi yì zhāng qù Shànghǎi de piào.", "Je voudrais un billet pour Shanghai."], ["火车几点开？", "Huǒchē jǐ diǎn kāi?", "À quelle heure part le train ?"], ["这是去北京的火车吗？", "Zhè shì qù Běijīng de huǒchē ma?", "C'est bien le train pour Pékin ?"]]}, {"g": "Hôtel", "e": "🏨", "p": [["我有预订。", "Wǒ yǒu yùdìng.", "J'ai une réservation."], ["我要一个房间。", "Wǒ yào yí ge fángjiān.", "Je voudrais une chambre."], ["有WiFi吗？", "Yǒu WiFi ma?", "Y a-t-il du WiFi ?"], ["几点退房？", "Jǐ diǎn tuìfáng?", "À quelle heure faut-il quitter la chambre ?"], ["我可以放行李吗？", "Wǒ kěyǐ fàng xíngli ma?", "Je peux laisser mes bagages ?"]]}, {"g": "Aide", "e": "🆘", "p": [["请帮我。", "Qǐng bāng wǒ.", "Aidez-moi, s'il vous plaît."], ["我迷路了。", "Wǒ mílù le.", "Je suis perdu(e)."], ["我不舒服。", "Wǒ bù shūfu.", "Je ne me sens pas bien."], ["请叫医生。", "Qǐng jiào yīshēng.", "Appelez un médecin, s'il vous plaît."], ["医院在哪里？", "Yīyuàn zài nǎlǐ?", "Où est l'hôpital ?"], ["我的手机不见了。", "Wǒ de shǒujī bú jiàn le.", "J'ai perdu mon téléphone."]]}];
+const TALL=[];TR.forEach(g=>g.p.forEach(x=>TALL.push(x)));
+let tgi=0,tgame=false,tdlg=false,G=null;
+S.t=S.t||{ok:0,tot:0};
+function showBig(x){
+  const o=document.createElement("div");o.className="bigshow";
+  o.innerHTML='<div class="bh"></div><div class="bf"></div><button class="sp">🔊</button>';
+  o.querySelector(".bh").textContent=x[0];o.querySelector(".bf").textContent=x[2];
+  o.querySelector(".sp").onclick=e=>{e.stopPropagation();speak(x[0],.8)};
+  o.onclick=()=>o.remove();document.body.appendChild(o);
+}
+function tRender(){
+  const gs=$("tgs");gs.innerHTML="";
+  TR.forEach((g,i)=>{const b=document.createElement("button");b.textContent=g.e+" "+g.g;b.className=(i===tgi&&!tgame&&!tdlg)?"on":"";b.onclick=()=>{tgi=i;tgame=false;tdlg=false;tRender()};gs.appendChild(b)});
+  $("tg").classList.toggle("act",tgame);$("td").classList.toggle("act",tdlg);
+  $("tlist").classList.toggle("hid",tgame||tdlg);$("tgame").classList.toggle("hid",!tgame);$("tdlg").classList.toggle("hid",!tdlg);
+  if(tdlg){dRender();return}
+  if(tgame){gRender();return}
+  const L=$("tlist");L.innerHTML="";
+  TR[tgi].p.forEach(x=>{
+    const c=document.createElement("div");c.className="tcard";
+    const t=document.createElement("div");t.className="tt";
+    t.innerHTML='<div class="th"></div><div class="tp"></div><div class="tf"></div>';
+    t.querySelector(".th").textContent=x[0];t.querySelector(".tp").textContent=x[1];t.querySelector(".tf").textContent=x[2];
+    t.onclick=()=>speak(x[0],.85);
+    const b=document.createElement("div");b.className="tb";
+    const s1=document.createElement("button");s1.textContent="🐢";s1.onclick=()=>speak(x[0],.5);
+    const s2=document.createElement("button");s2.textContent="📲";s2.onclick=()=>showBig(x);
+    b.appendChild(s1);b.appendChild(s2);c.appendChild(t);c.appendChild(b);L.appendChild(c);
+  });
+}
+function gNew(){
+  const ph=TALL[rnd(TALL.length)];
+  const others=shuf(TALL.filter(y=>y[2]!==ph[2])).slice(0,2);
+  G={ph:ph,opts:shuf([ph].concat(others)),wrong:[],done:false};
+  gRender();speak(ph[0],.75);
+}
+function gRender(){
+  if(!G){gNew();return}
+  const box=$("gopts");box.innerHTML="";
+  G.opts.forEach(o=>{const b=document.createElement("button");b.className="gopt";b.textContent=o[2];
+    if(G.wrong.includes(o[2])){b.disabled=true;b.classList.add("dim")}
+    if(G.done&&o[2]===G.ph[2])b.classList.add("good");
+    b.onclick=()=>gPick(o);box.appendChild(b)});
+  const m=$("gmsg");
+  if(G.done){m.className="qmsg ok";m.textContent="✓ "+G.ph[0]+"  "+G.ph[1]}
+  else{m.className="qmsg";m.textContent=G.wrong.length?"Écoute encore 🎧 Quels sons reconnais-tu ?":""}
+  $("gsc").textContent="⭐ "+S.t.ok+" / "+S.t.tot;
+}
+function gPick(o){
+  if(G.done)return;
+  if(o[2]===G.ph[2]){G.done=true;S.t.tot++;if(!G.wrong.length)S.t.ok++;save();chime();gRender();speak(G.ph[0],.85)}
+  else{G.wrong.push(o[2]);gRender()}
+}
+$("tg").onclick=()=>{tgame=!tgame;tdlg=false;if(tgame&&!G)gNew();tRender()};
+$("td").onclick=()=>{tdlg=!tdlg;tgame=false;dI=-1;dS=null;tRender()};
+$("gplay").onclick=()=>{if(G)speak(G.ph[0],.8)};
+$("gslow").onclick=()=>{if(G)speak(G.ph[0],.5)};
+$("gnext").onclick=gNew;
+const DL=[{"t": "Au restaurant", "e": "🍜", "turns": [{"o": [["一位。", "Yí wèi.", "Une personne."], ["我要一杯水。", "Wǒ yào yì bēi shuǐ.", "Je voudrais un verre d'eau."], ["再见！", "Zàijiàn!", "Au revoir !"]], "h": "Il te demande un nombre de personnes. Laquelle de ces réponses est un nombre ?", "npc": ["欢迎光临！几位？", "Huānyíng guānglín! Jǐ wèi?", "Bienvenue ! Vous êtes combien ?"]}, {"o": [["我要这个。", "Wǒ yào zhège.", "Je prends ça."], ["我有预订。", "Wǒ yǒu yùdìng.", "J'ai une réservation."], ["请去机场。", "Qǐng qù jīchǎng.", "À l'aéroport, s'il vous plaît."]], "h": "Tu montres un plat du doigt. Quelle phrase te permet de le faire ?", "npc": ["这是菜单。你要吃什么？", "Zhè shì càidān. Nǐ yào chī shénme?", "Voici le menu. Que veux-tu manger ?"]}, {"o": [["不要辣。", "Bú yào là.", "Pas piquant."], ["往左拐。", "Wǎng zuǒ guǎi.", "Tournez à gauche."], ["我要买一张票。", "Wǒ yào mǎi yì zhāng piào.", "Je voudrais un billet."]], "h": "Le serveur parle du piquant (辣). Quelle réponse en parle aussi ?", "npc": ["要辣的吗？", "Yào là de ma?", "Tu veux du piquant ?"]}, {"o": [["我要一杯水。", "Wǒ yào yì bēi shuǐ.", "Je voudrais un verre d'eau."], ["我迷路了。", "Wǒ mílù le.", "Je suis perdu(e)."], ["多少钱？", "Duōshao qián?", "Combien ça coûte ?"]], "h": "Il demande ce que tu veux boire. Quelle réponse contient 杯 (verre) ?", "npc": ["喝什么？", "Hē shénme?", "Qu'est-ce que tu bois ?"]}, {"o": [["买单。", "Mǎidān.", "L'addition, s'il vous plaît."], ["我吃素。", "Wǒ chī sù.", "Je suis végétarien(ne)."], ["一直走。", "Yìzhí zǒu.", "Tout droit."]], "h": "Tu as fini de manger. Que demandes-tu au serveur ?", "npc": ["吃好了吗？", "Chī hǎo le ma?", "Tu as fini ?"]}]}, {"t": "En taxi", "e": "🚕", "turns": [{"o": [["请去机场。", "Qǐng qù jīchǎng.", "À l'aéroport, s'il vous plaît."], ["我要一杯茶。", "Wǒ yào yì bēi chá.", "Je voudrais un thé."], ["我吃素。", "Wǒ chī sù.", "Je suis végétarien(ne)."]], "h": "Il demande ta destination. Quelle réponse nomme un lieu ?", "npc": ["你好，去哪里？", "Nǐ hǎo, qù nǎlǐ?", "Bonjour, vous allez où ?"]}, {"o": [["我会说一点中文。", "Wǒ huì shuō yìdiǎn Zhōngwén.", "Je parle un peu chinois."], ["我要这个。", "Wǒ yào zhège.", "Je prends ça."], ["几点退房？", "Jǐ diǎn tuìfáng?", "À quelle heure faut-il quitter la chambre ?"]], "h": "Il parle de 中文 (le chinois). Quelle réponse en parle aussi ?", "npc": ["好的。你会说中文吗？", "Hǎo de. Nǐ huì shuō Zhōngwén ma?", "D'accord. Tu parles chinois ?"]}, {"o": [["多少钱？", "Duōshao qián?", "Combien je vous dois ?"], ["一位。", "Yí wèi.", "Une personne."], ["我有预订。", "Wǒ yǒu yùdìng.", "J'ai une réservation."]], "h": "Tu es arrivé(e). Que veux-tu savoir avant de descendre ?", "npc": ["到了！", "Dào le!", "On est arrivés !"]}, {"o": [["可以用支付宝吗？", "Kěyǐ yòng Zhīfùbǎo ma?", "Je peux payer avec Alipay ?"], ["我迷路了。", "Wǒ mílù le.", "Je suis perdu(e)."], ["往右拐。", "Wǎng yòu guǎi.", "Tournez à droite."]], "h": "Il t'a donné le prix. Comment poses-tu la question du paiement ?", "npc": ["三十块。", "Sānshí kuài.", "Trente yuans."]}, {"o": [["谢谢，再见！", "Xièxie, zàijiàn!", "Merci, au revoir !"], ["太贵了！", "Tài guì le!", "C'est trop cher !"], ["我听不懂。", "Wǒ tīng bu dǒng.", "Je ne comprends pas."]], "h": "Tout est réglé. Comment prends-tu congé poliment ?", "npc": ["可以。", "Kěyǐ.", "C'est possible."]}]}, {"t": "Au marché", "e": "🛒", "turns": [{"o": [["我要三个苹果。", "Wǒ yào sān gè píngguǒ.", "Je voudrais trois pommes."], ["请去机场。", "Qǐng qù jīchǎng.", "À l'aéroport, s'il vous plaît."], ["我有预订。", "Wǒ yǒu yùdìng.", "J'ai une réservation."]], "h": "Il demande ce que tu achètes. Quelle réponse parle de fruits ?", "npc": ["你好！你要什么？", "Nǐ hǎo! Nǐ yào shénme?", "Bonjour ! Que veux-tu ?"]}, {"o": [["我也要两条鱼。", "Wǒ yě yào liǎng tiáo yú.", "Je voudrais aussi deux poissons."], ["我迷路了。", "Wǒ mílù le.", "Je suis perdu(e)."], ["往左拐。", "Wǎng zuǒ guǎi.", "Tournez à gauche."]], "h": "Tu veux ajouter quelque chose. Quel mot veut dire « aussi » (也) ?", "npc": ["好的。还要别的吗？", "Hǎo de. Hái yào bié de ma?", "D'accord. Autre chose ?"]}, {"o": [["可以便宜一点吗？", "Kěyǐ piányi yìdiǎn ma?", "Pouvez-vous baisser un peu le prix ?"], ["医院在哪里？", "Yīyuàn zài nǎlǐ?", "Où est l'hôpital ?"], ["一位。", "Yí wèi.", "Une personne."]], "h": "Cinquante yuans, c'est un peu cher ? Que peux-tu demander ?", "npc": ["一共五十块。", "Yígòng wǔshí kuài.", "Cinquante yuans en tout."]}, {"o": [["好的，谢谢！", "Hǎo de, xièxie!", "D'accord, merci !"], ["我吃素。", "Wǒ chī sù.", "Je suis végétarien(ne)."], ["我不舒服。", "Wǒ bù shūfu.", "Je ne me sens pas bien."]], "h": "Il a baissé son prix. Comment acceptes-tu poliment ?", "npc": ["好吧，四十五块。", "Hǎo ba, sìshíwǔ kuài.", "D'accord, quarante-cinq yuans."]}]}, {"t": "À l'hôtel", "e": "🏨", "turns": [{"o": [["我有预订。", "Wǒ yǒu yùdìng.", "J'ai une réservation."], ["买单。", "Mǎidān.", "L'addition, s'il vous plaît."], ["一直走。", "Yìzhí zǒu.", "Tout droit."]], "h": "Tu arrives à l'hôtel. Qu'as-tu fait avant de venir ?", "npc": ["你好，欢迎！", "Nǐ hǎo, huānyíng!", "Bonjour, bienvenue !"]}, {"o": [["我叫小明。", "Wǒ jiào Xiǎo Míng.", "Je m'appelle Xiao Ming."], ["我要这个。", "Wǒ yào zhège.", "Je prends ça."], ["再见！", "Zàijiàn!", "Au revoir !"]], "h": "Quelle phrase commence par « je m'appelle » (我叫) ?", "npc": ["你叫什么名字？", "Nǐ jiào shénme míngzi?", "Comment t'appelles-tu ?"]}, {"o": [["我要一个房间。", "Wǒ yào yí ge fángjiān.", "Je voudrais une chambre."], ["我要三个苹果。", "Wǒ yào sān gè píngguǒ.", "Je voudrais trois pommes."], ["我迷路了。", "Wǒ mílù le.", "Je suis perdu(e)."]], "h": "Quel mot de la question reconnais-tu : 房间 ? Reprends-le.", "npc": ["你要几个房间？", "Nǐ yào jǐ ge fángjiān?", "Vous voulez combien de chambres ?"]}, {"o": [["有WiFi吗？", "Yǒu WiFi ma?", "Y a-t-il du WiFi ?"], ["我要买一张票。", "Wǒ yào mǎi yì zhāng piào.", "Je voudrais un billet."], ["一位。", "Yí wèi.", "Une personne."]], "h": "Tu veux te connecter à Internet dans la chambre. Que demandes-tu ?", "npc": ["还有别的问题吗？", "Hái yǒu bié de wèntí ma?", "Vous avez d'autres questions ?"]}]}, {"t": "Demander son chemin", "e": "🧭", "turns": [{"o": [["请问，地铁站在哪里？", "Qǐngwèn, dìtiězhàn zài nǎlǐ?", "Où est la station de métro ?"], ["请问，洗手间在哪里？", "Qǐngwèn, xǐshǒujiān zài nǎlǐ?", "Où sont les toilettes ?"], ["我要一杯水。", "Wǒ yào yì bēi shuǐ.", "Je voudrais un verre d'eau."]], "h": "Regarde bien le lieu demandé. Est-ce celui que tu cherches ?", "sit": "Tu cherches la station de métro. Que demandes-tu ?"}, {"o": [["请再说一遍。", "Qǐng zài shuō yí biàn.", "Pouvez-vous répéter ?"], ["我要这个。", "Wǒ yào zhège.", "Je prends ça."], ["我有预订。", "Wǒ yǒu yùdìng.", "J'ai une réservation."]], "h": "Il a parlé vite. Que peux-tu lui demander pour réentendre ?", "npc": ["一直走，然后往左拐。", "Yìzhí zǒu, ránhòu wǎng zuǒ guǎi.", "Tout droit, puis tournez à gauche."]}, {"o": [["谢谢你！", "Xièxie nǐ!", "Merci !"], ["太贵了！", "Tài guì le!", "C'est trop cher !"], ["我吃素。", "Wǒ chī sù.", "Je suis végétarien(ne)."]], "h": "Tu as compris. Comment remercies-tu ?", "npc": ["一直走，往左拐。不远。", "Yìzhí zǒu, wǎng zuǒ guǎi. Bù yuǎn.", "Tout droit, à gauche. Ce n'est pas loin."]}]}, {"t": "À la gare", "e": "🚆", "turns": [{"o": [["我要买一张去上海的票。", "Wǒ yào mǎi yì zhāng qù Shànghǎi de piào.", "Je voudrais un billet pour Shanghai."], ["我要买一张去北京的票。", "Wǒ yào mǎi yì zhāng qù Běijīng de piào.", "Je voudrais un billet pour Pékin."], ["我要一杯茶。", "Wǒ yào yì bēi chá.", "Je voudrais un thé."]], "h": "Vérifie la ville inscrite sur le billet.", "sit": "Tu veux un billet pour Shanghai. Que dis-tu ?"}, {"o": [["可以刷卡吗？", "Kěyǐ shuā kǎ ma?", "Je peux payer par carte ?"], ["我有预订。", "Wǒ yǒu yùdìng.", "J'ai une réservation."], ["医院在哪里？", "Yīyuàn zài nǎlǐ?", "Où est l'hôpital ?"]], "h": "Comment demander si tu peux payer par carte ?", "npc": ["一共一百块。", "Yígòng yìbǎi kuài.", "Cent yuans en tout."]}, {"o": [["火车几点开？", "Huǒchē jǐ diǎn kāi?", "À quelle heure part le train ?"], ["火车站在哪里？", "Huǒchēzhàn zài nǎlǐ?", "Où est la gare ?"], ["离这里远吗？", "Lí zhèlǐ yuǎn ma?", "C'est loin d'ici ?"]], "h": "Tu veux savoir l'heure, pas le lieu. Quel mot demande « à quelle heure » (几点) ?", "sit": "Tu veux connaître l'heure du train. Que demandes-tu ?"}, {"o": [["谢谢！", "Xièxie!", "Merci !"], ["太贵了！", "Tài guì le!", "C'est trop cher !"], ["我不舒服。", "Wǒ bù shūfu.", "Je ne me sens pas bien."]], "h": "Il t'a donné l'heure. Que dis-tu ?", "npc": ["八点。", "Bā diǎn.", "Huit heures."]}]}, {"t": "Perdu(e) dans la rue", "e": "🗺️", "turns": [{"o": [["请帮我。我迷路了。", "Qǐng bāng wǒ. Wǒ mílù le.", "Aidez-moi. Je suis perdu(e)."], ["买单。", "Mǎidān.", "L'addition, s'il vous plaît."], ["我吃素。", "Wǒ chī sù.", "Je suis végétarien(ne)."]], "h": "Que dis-tu pour appeler à l'aide et expliquer ton problème ?", "sit": "Tu es perdu(e). Que dis-tu à un passant ?"}, {"o": [["我要去火车站。", "Wǒ yào qù huǒchēzhàn.", "Je veux aller à la gare."], ["我要三个苹果。", "Wǒ yào sān gè píngguǒ.", "Je voudrais trois pommes."], ["再见！", "Zàijiàn!", "Au revoir !"]], "h": "Il te demande ta destination. Quelle réponse contient 去 (aller) ?", "npc": ["你要去哪里？", "Nǐ yào qù nǎlǐ?", "Où veux-tu aller ?"]}, {"o": [["谢谢你！", "Xièxie nǐ!", "Merci !"], ["太贵了！", "Tài guì le!", "C'est trop cher !"], ["买单。", "Mǎidān.", "L'addition, s'il vous plaît."]], "h": "Quelqu'un te propose son aide. Comment réagis-tu ?", "npc": ["我带你去。", "Wǒ dài nǐ qù.", "Je t'accompagne."]}]}, {"t": "Se présenter", "e": "👋", "turns": [{"o": [["你好！", "Nǐ hǎo!", "Bonjour !"], ["买单。", "Mǎidān.", "L'addition, s'il vous plaît."], ["往左拐。", "Wǎng zuǒ guǎi.", "Tournez à gauche."]], "h": "Que réponds-tu quand on te salue ?", "npc": ["你好！", "Nǐ hǎo!", "Bonjour !"]}, {"o": [["我叫小明。", "Wǒ jiào Xiǎo Míng.", "Je m'appelle Xiao Ming."], ["我要这个。", "Wǒ yào zhège.", "Je prends ça."], ["多少钱？", "Duōshao qián?", "Combien ça coûte ?"]], "h": "Quelle phrase commence par « je m'appelle » (我叫) ?", "npc": ["你叫什么名字？", "Nǐ jiào shénme míngzi?", "Comment t'appelles-tu ?"]}, {"o": [["我也很高兴。", "Wǒ yě hěn gāoxìng.", "Moi aussi, je suis content(e)."], ["太贵了！", "Tài guì le!", "C'est trop cher !"], ["我要这个。", "Wǒ yào zhège.", "Je prends ça."]], "h": "Il est content de te rencontrer. Dis-le aussi (也 = aussi).", "npc": ["很高兴认识你。", "Hěn gāoxìng rènshi nǐ.", "Enchanté(e)."]}, {"o": [["我会说一点中文。", "Wǒ huì shuō yìdiǎn Zhōngwén.", "Je parle un peu chinois."], ["我有预订。", "Wǒ yǒu yùdìng.", "J'ai une réservation."], ["一直走。", "Yìzhí zǒu.", "Tout droit."]], "h": "Que réponds-tu quand on te demande si tu parles chinois ?", "npc": ["你会说中文吗？", "Nǐ huì shuō Zhōngwén ma?", "Tu parles chinois ?"]}]}];
+DL.push(...[{"t": "Au café", "e": "☕", "turns": [{"npc": ["你好，要喝什么？", "Nǐ hǎo, yào hē shénme?", "Bonjour, que voulez-vous boire ?"], "o": [["我要一杯咖啡。", "Wǒ yào yì bēi kāfēi.", "Je voudrais un café."], ["我要三个苹果。", "Wǒ yào sān gè píngguǒ.", "Je voudrais trois pommes."], ["我有预订。", "Wǒ yǒu yùdìng.", "J'ai une réservation."]], "h": "Il demande ce que tu bois. Quelle réponse contient 杯 (verre, tasse) ?"}, {"npc": ["热的还是冰的？", "Rè de háishi bīng de?", "Chaud ou glacé ?"], "o": [["我要热的。", "Wǒ yào rè de.", "Je le veux chaud."], ["往左拐。", "Wǎng zuǒ guǎi.", "Tournez à gauche."], ["我要买一张票。", "Wǒ yào mǎi yì zhāng piào.", "Je voudrais un billet."]], "h": "Il propose chaud (热) ou glacé (冰). Quelle réponse choisit l'un des deux ?"}, {"npc": ["要加糖吗？", "Yào jiā táng ma?", "Avec du sucre ?"], "o": [["不要糖。", "Bú yào táng.", "Pas de sucre."], ["我迷路了。", "Wǒ mílù le.", "Je suis perdu(e)."], ["一位。", "Yí wèi.", "Une personne."]], "h": "Tu connais 不要 (je ne veux pas). Quelle réponse commence par là ?"}, {"npc": ["还要吃的吗？", "Hái yào chī de ma?", "Vous voulez aussi quelque chose à manger ?"], "o": [["我要一个面包。", "Wǒ yào yí ge miànbāo.", "Je voudrais un pain."], ["请去机场。", "Qǐng qù jīchǎng.", "À l'aéroport, s'il vous plaît."], ["医院在哪里？", "Yīyuàn zài nǎlǐ?", "Où est l'hôpital ?"]], "h": "Il parle de manger (吃). Quelle réponse parle de nourriture ?"}, {"npc": ["二十八块。", "Èrshíbā kuài.", "Vingt-huit yuans."], "o": [["可以刷卡吗？", "Kěyǐ shuā kǎ ma?", "Je peux payer par carte ?"], ["我吃素。", "Wǒ chī sù.", "Je suis végétarien(ne)."], ["往右拐。", "Wǎng yòu guǎi.", "Tournez à droite."]], "h": "Il t'a donné le prix. Comment demandes-tu à payer par carte ?"}]}, {"t": "À la pharmacie", "e": "💊", "turns": [{"npc": ["你好，你怎么了？", "Nǐ hǎo, nǐ zěnme le?", "Bonjour, qu'est-ce qui ne va pas ?"], "o": [["我不舒服。", "Wǒ bù shūfu.", "Je ne me sens pas bien."], ["买单。", "Mǎidān.", "L'addition, s'il vous plaît."], ["再见！", "Zàijiàn!", "Au revoir !"]], "h": "Il demande comment tu vas. Quelle réponse dit que ça ne va pas ?"}, {"npc": ["哪里不舒服？", "Nǎlǐ bù shūfu?", "Où avez-vous mal ?"], "o": [["我头疼。", "Wǒ tóu téng.", "J'ai mal à la tête."], ["我要这个。", "Wǒ yào zhège.", "Je prends ça."], ["一直走。", "Yìzhí zǒu.", "Tout droit."]], "h": "Il demande où. Quelle réponse nomme une partie du corps (头 = tête) ?"}, {"npc": ["这个药，一天三次。", "Zhège yào, yì tiān sān cì.", "Ce médicament, trois fois par jour."], "o": [["请说慢一点。", "Qǐng shuō màn yìdiǎn.", "Parlez plus lentement, s'il vous plaît."], ["太贵了！", "Tài guì le!", "C'est trop cher !"], ["我要一杯茶。", "Wǒ yào yì bēi chá.", "Je voudrais un thé."]], "h": "Tu veux être sûr(e) de bien comprendre. Que lui demandes-tu ?"}, {"npc": ["如果还不舒服，请去医院。", "Rúguǒ hái bù shūfu, qǐng qù yīyuàn.", "Si ça ne va toujours pas, allez à l'hôpital."], "o": [["医院在哪里？", "Yīyuàn zài nǎlǐ?", "Où est l'hôpital ?"], ["太贵了！", "Tài guì le!", "C'est trop cher !"], ["我有预订。", "Wǒ yǒu yùdìng.", "J'ai une réservation."]], "h": "Il parle de l'hôpital (医院). Que peux-tu demander ?"}]}, {"t": "Acheter des vêtements", "e": "👕", "turns": [{"npc": ["你好，你要买什么？", "Nǐ hǎo, nǐ yào mǎi shénme?", "Bonjour, que voulez-vous acheter ?"], "o": [["我想买一件衣服。", "Wǒ xiǎng mǎi yí jiàn yīfu.", "Je voudrais acheter un vêtement."], ["我要一杯茶。", "Wǒ yào yì bēi chá.", "Je voudrais un thé."], ["我迷路了。", "Wǒ mílù le.", "Je suis perdu(e)."]], "h": "Quelle réponse contient 衣服 (vêtement) et le classificateur 件 ?"}, {"npc": ["要大的还是小的？", "Yào dà de háishi xiǎo de?", "Grand ou petit ?"], "o": [["我要大的。", "Wǒ yào dà de.", "Je le veux grand."], ["我吃素。", "Wǒ chī sù.", "Je suis végétarien(ne)."], ["往左拐。", "Wǎng zuǒ guǎi.", "Tournez à gauche."]], "h": "Il propose grand (大) ou petit (小). Quelle réponse choisit l'un des deux ?"}, {"npc": ["这件很好看。", "Zhè jiàn hěn hǎokàn.", "Celui-ci est très joli."], "o": [["多少钱？", "Duōshao qián?", "Combien ça coûte ?"], ["一位。", "Yí wèi.", "Une personne."], ["医院在哪里？", "Yīyuàn zài nǎlǐ?", "Où est l'hôpital ?"]], "h": "Tu aimes le vêtement. Quelle question poses-tu avant d'acheter ?"}, {"npc": ["一百五十块。", "Yìbǎi wǔshí kuài.", "Cent cinquante yuans."], "o": [["太贵了！可以便宜一点吗？", "Tài guì le! Kěyǐ piányi yìdiǎn ma?", "C'est trop cher ! Pouvez-vous baisser un peu le prix ?"], ["我有预订。", "Wǒ yǒu yùdìng.", "J'ai une réservation."], ["我不舒服。", "Wǒ bù shūfu.", "Je ne me sens pas bien."]], "h": "C'est cher. Comment négocies-tu poliment ?"}, {"npc": ["好，一百块。", "Hǎo, yìbǎi kuài.", "D'accord, cent yuans."], "o": [["好的，我要这个。", "Hǎo de, wǒ yào zhège.", "D'accord, je le prends."], ["我吃素。", "Wǒ chī sù.", "Je suis végétarien(ne)."], ["往右拐。", "Wǎng yòu guǎi.", "Tournez à droite."]], "h": "Il a baissé son prix. Comment acceptes-tu ?"}]}]);
+S.d=S.d||{done:{}};
+let dI=-1,dS=null;
+function dSay(){const t=DL[dI].turns[dS.i];if(t&&t.npc)speak(t.npc[0],.8)}
+function dRender(){
+  const box=$("tdlg");box.innerHTML="";
+  if(dI<0){
+    const h=document.createElement("div");h.className="hint";h.textContent="Choisis une situation : l'app joue l'autre personne, tu réponds.";box.appendChild(h);
+    DL.forEach((d,i)=>{const b=document.createElement("button");b.className="ncard";
+      b.innerHTML='<span class="nm"></span><span><div class="nh" style="font-size:20px"></div><div class="nf"></div></span><span class="nr"></span>';
+      b.querySelector(".nm").textContent=d.e;b.querySelector(".nh").textContent=d.t;b.querySelector(".nf").textContent=d.turns.length+" échanges";
+      b.querySelector(".nr").textContent=S.d.done[d.t]!==undefined?"⭐ "+S.d.done[d.t]+"/"+d.turns.length:"";
+      b.onclick=()=>{dI=i;dS={i:0,wrong:[],done:false,ok:0,help:false,order:null};dRender();dSay()};box.appendChild(b)});
+    return;
+  }
+  const d=DL[dI],n=d.turns.length;
+  const bar=document.createElement("div");bar.className="dbar";
+  const back=document.createElement("button");back.textContent="‹ Situations";back.onclick=()=>{dI=-1;dS=null;dRender()};
+  const pr=document.createElement("span");pr.className="nf";pr.textContent=d.e+" "+d.t+" · "+Math.min(dS.i+1,n)+"/"+n;
+  const hp=document.createElement("button");hp.textContent="👁 Sens";hp.className=dS.help?"act":"";hp.onclick=()=>{dS.help=!dS.help;dRender()};
+  bar.appendChild(back);bar.appendChild(pr);bar.appendChild(hp);box.appendChild(bar);
+  if(dS.i>=n){
+    S.d.done[d.t]=Math.max(S.d.done[d.t]||0,dS.ok);save();
+    const big=document.createElement("div");big.className="big";
+    big.innerHTML='<div style="font-size:54px">🎉</div><div class="tr"></div>';
+    big.querySelector(".tr").textContent="⭐ "+dS.ok+" / "+n+" du premier coup";
+    box.appendChild(big);
+    const r=document.createElement("div");r.className="brow";
+    const b1=document.createElement("button");b1.className="alt";b1.textContent="↺ Rejouer";b1.onclick=()=>{dS={i:0,wrong:[],done:false,ok:0,help:false,order:null};dRender();dSay()};
+    const b2=document.createElement("button");b2.textContent="Autres situations";b2.onclick=()=>{dI=-1;dS=null;dRender()};
+    r.appendChild(b1);r.appendChild(b2);box.appendChild(r);
+    return;
+  }
+  const t=d.turns[dS.i];
+  if(!dS.order)dS.order=shuf(t.o.map((x,k)=>k));
+  const show=dS.help||dS.done;
+  const nb=document.createElement("div");
+  if(t.npc){
+    nb.className="dnpc";
+    nb.innerHTML='<span class="dav">🗣️</span><div style="flex:1"><div class="dh"></div><div class="dp"></div><div class="df"></div></div><button class="sm">🔊</button>';
+    nb.querySelector(".dh").textContent=t.npc[0];nb.querySelector(".dp").textContent=t.npc[1];
+    nb.querySelector(".df").textContent=show?t.npc[2]:"";
+    nb.querySelector(".sm").onclick=()=>speak(t.npc[0],.7);
+  }else{nb.className="dnpc dsit";nb.textContent=t.sit}
+  box.appendChild(nb);
+  dS.order.forEach(k=>{
+    const o=t.o[k],b=document.createElement("button");b.className="gopt";
+    b.innerHTML='<div class="oh"></div><div class="op"></div><div class="of"></div>';
+    b.querySelector(".oh").textContent=o[0];b.querySelector(".op").textContent=o[1];b.querySelector(".of").textContent=show?o[2]:"";
+    if(dS.wrong.includes(k)){b.disabled=true;b.classList.add("dim")}
+    if(dS.done&&k===0)b.classList.add("good");
+    b.onclick=()=>{
+      if(dS.done)return;
+      if(k===0){dS.done=true;if(!dS.wrong.length)dS.ok++;chime();speak(o[0],.85);dRender()}
+      else{dS.wrong.push(k);dRender()}
+    };
+    box.appendChild(b);
+  });
+  const m=document.createElement("div");m.id="dmsg";
+  if(dS.done){m.className="qmsg ok";m.textContent="✓"}
+  else{m.className="qmsg";m.textContent=dS.wrong.length?"Écoute encore 🎧 "+t.h:""}
+  box.appendChild(m);
+  if(dS.done){
+    const r=document.createElement("div");r.className="brow";
+    const nx=document.createElement("button");nx.id="dnext";nx.textContent=dS.i+1>=n?"Terminer ›":"Suivant ›";
+    nx.onclick=()=>{dS.i++;dS.order=null;dS.done=false;dS.wrong=[];dRender();dSay()};
+    r.appendChild(nx);box.appendChild(r);
+  }
+}
+const TN=[{"n": 1, "h": "妈", "p": "mā", "f": "maman", "d": "Haut et plat", "m": "Reste en haut, comme une note tenue"}, {"n": 2, "h": "麻", "p": "má", "f": "chanvre", "d": "Monte", "m": "Comme une question : « quoi ? »"}, {"n": 3, "h": "马", "p": "mǎ", "f": "cheval", "d": "Descend puis remonte", "m": "Un creux dans la voix"}, {"n": 4, "h": "骂", "p": "mà", "f": "gronder", "d": "Tombe d'un coup", "m": "Comme un ordre sec : « non ! »"}, {"n": 5, "h": "吗", "p": "ma", "f": "(question)", "d": "Léger et court", "m": "Pas de hauteur propre"}],TQ=[["妈", 1, "mā", "maman"], ["汤", 1, "tāng", "soupe"], ["书", 1, "shū", "livre"], ["家", 1, "jiā", "maison"], ["茶", 2, "chá", "thé"], ["糖", 2, "táng", "sucre"], ["人", 2, "rén", "personne"], ["钱", 2, "qián", "argent"], ["马", 3, "mǎ", "cheval"], ["水", 3, "shuǐ", "eau"], ["我", 3, "wǒ", "je"], ["买", 3, "mǎi", "acheter"], ["好", 3, "hǎo", "bon"], ["卖", 4, "mài", "vendre"], ["看", 4, "kàn", "regarder"], ["大", 4, "dà", "grand"], ["去", 4, "qù", "aller"], ["睡", 4, "shuì", "dormir"], ["树", 4, "shù", "arbre"]],PR=[[["买", "mǎi", "acheter"], ["卖", "mài", "vendre"]], [["汤", "tāng", "soupe"], ["糖", "táng", "sucre"]], [["水", "shuǐ", "eau"], ["睡", "shuì", "dormir"]], [["书", "shū", "livre"], ["树", "shù", "arbre"]], [["妈", "mā", "maman"], ["马", "mǎ", "cheval"]], [["家", "jiā", "maison"], ["假", "jiǎ", "faux"]], [["好", "hǎo", "bon"], ["号", "hào", "numéro"]], [["花", "huā", "fleur"], ["画", "huà", "dessin"]], [["鱼", "yú", "poisson"], ["雨", "yǔ", "pluie"]], [["猫", "māo", "chat"], ["毛", "máo", "poil"]], [["问", "wèn", "demander"], ["文", "wén", "écrit"]]],SND=[["ü", "Comme le « u » français de « lune »", [["女", "nǚ", "femme"], ["绿", "lǜ", "vert"]]], ["x", "Entre « s » et « ch », lèvres étirées comme pour sourire", [["西", "xī", "ouest"], ["谢", "xiè", "remercier"]]], ["q", "Un « tch » avec un petit souffle d'air", [["七", "qī", "sept"], ["钱", "qián", "argent"]]], ["j", "Comme q, mais sans souffle", [["家", "jiā", "maison"], ["九", "jiǔ", "neuf"]]], ["zh", "Langue recourbée vers l'arrière, sans souffle", [["中", "zhōng", "milieu"], ["知", "zhī", "savoir"]]], ["ch", "Comme zh, mais avec un souffle", [["吃", "chī", "manger"], ["茶", "chá", "thé"]]], ["sh", "Comme « ch » français, langue recourbée vers l'arrière", [["水", "shuǐ", "eau"], ["是", "shì", "être"]]], ["r", "Langue recourbée, entre le « r » anglais et le « j » français", [["热", "rè", "chaud"], ["人", "rén", "personne"]]], ["c", "Un « ts » avec un souffle", [["菜", "cài", "plat"], ["草", "cǎo", "herbe"]]], ["z", "Un « ts » sans souffle", [["在", "zài", "être à"], ["字", "zì", "caractère"]]]],RL=[["3ᵉ ton + 3ᵉ ton", "Le premier devient 2ᵉ ton", [["你好", "nǐ hǎo → ní hǎo", "bonjour"], ["很好", "hěn hǎo → hén hǎo", "très bien"]]], ["不 bù", "Devant un 4ᵉ ton, il devient bú", [["不要", "bú yào", "ne pas vouloir"], ["不去", "bú qù", "ne pas aller"], ["不好", "bù hǎo", "pas bien"]]], ["一 yī", "Devant un 4ᵉ ton : yí. Devant 1, 2 ou 3 : yì", [["一个", "yí gè", "un"], ["一杯", "yì bēi", "un verre"], ["一只", "yì zhī", "un (animal)"]]], ["Ton neutre", "Syllabe courte et légère, sans hauteur propre", [["谢谢", "xièxie", "merci"], ["妈妈", "māma", "maman"], ["朋友", "péngyou", "ami"]]]];
+S.tn=S.tn||{ok:0,tot:0};S.tm=S.tm||{ok:0,tot:0};
+let tsub="l",Q2=null,M2=null,toneBusy=false;
+function toneSvg(n,sz){
+  const P={1:"8,8 52,8",2:"8,30 52,8",3:"8,41 22,52 52,19",4:"8,8 52,52"};
+  let g='<svg viewBox="0 0 60 60" width="'+sz+'" height="'+sz+'" aria-hidden="true">';
+  [8,19,30,41,52].forEach(y=>{g+='<line x1="4" x2="56" y1="'+y+'" y2="'+y+'" stroke="currentColor" stroke-opacity=".13"/>'});
+  if(n===5)g+='<circle cx="30" cy="41" r="5" fill="var(--acc)"/>';
+  else{const pt=P[n].split(" ")[0].split(",");
+    g+='<polyline points="'+P[n]+'" fill="none" stroke="var(--acc)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="'+pt[0]+'" cy="'+pt[1]+'" r="6" fill="var(--acc)"/>'}
+  return g+'</svg>';
+}
+function tChip(x){const b=chip(x[0],x[1]+(x[2]?" · "+x[2]:""),false,()=>speak(x[0],.6));return b}
+function toneRender(){
+  const tb=$("ttabs");tb.innerHTML="";
+  [["l","📈 Les tons"],["q","🎧 Quel ton ?"],["m","👂 Quel mot ?"],["s","🗣 Sons"],["r","🔁 Règles"]].forEach(x=>{
+    const b=document.createElement("button");b.textContent=x[1];b.className=x[0]===tsub?"on":"";b.onclick=()=>{tsub=x[0];toneRender()};tb.appendChild(b)});
+  const c=$("tcont");c.innerHTML="";
+  ({l:tnL,q:tnQ,m:tnM,s:tnS,r:tnR})[tsub](c);
+}
+function tnL(c){
+  const b=document.createElement("button");b.className="sm";b.style.cssText="display:block;margin:0 auto 10px;padding:10px 18px";b.textContent="🔊 Écouter les 4 tons";
+  b.onclick=async()=>{if(toneBusy)return;toneBusy=true;try{speechSynthesis.cancel()}catch(e){}
+    for(const t of TN.slice(0,4)){await sp(t.h,"zh-CN",.6);await wait(350)}toneBusy=false};
+  c.appendChild(b);
+  TN.forEach(t=>{
+    const d=document.createElement("div");d.className="tncard";
+    d.innerHTML=toneSvg(t.n,64)+'<div style="flex:1"><div class="a"></div><div class="b"></div><div class="c"></div></div>';
+    d.querySelector(".a").textContent=t.h+"  "+t.p;d.querySelector(".b").textContent=t.n<5?"Ton "+t.n+" · "+t.d:"Ton neutre · "+t.d;d.querySelector(".c").textContent=t.f+" — "+t.m;
+    d.onclick=()=>speak(t.h,.6);c.appendChild(d)});
+}
+function q2New(){Q2={it:TQ[rnd(TQ.length)],wrong:[],done:false};speak(Q2.it[0],.6)}
+function tnQ(c){
+  if(!Q2)q2New();
+  const it=Q2.it;
+  const big=document.createElement("div");big.className="big";
+  big.innerHTML='<div style="font-size:54px">🎧</div><div class="tr">Quel ton entends-tu ?</div><div class="row"><button class="sm" id="q2p">🔊</button><button class="sm" id="q2s">🐢</button></div>';
+  c.appendChild(big);
+  big.querySelector("#q2p").onclick=()=>speak(it[0],.7);big.querySelector("#q2s").onclick=()=>speak(it[0],.45);
+  const g=document.createElement("div");g.className="tonegrid";
+  [1,2,3,4].forEach(n=>{
+    const b=document.createElement("button");b.className="gopt tbtn";b.innerHTML=toneSvg(n,46)+'<span>'+n+'</span>';
+    if(Q2.wrong.includes(n)){b.disabled=true;b.classList.add("dim")}
+    if(Q2.done&&n===it[1])b.classList.add("good");
+    b.onclick=()=>{if(Q2.done)return;
+      if(n===it[1]){Q2.done=true;S.tn.tot++;if(!Q2.wrong.length)S.tn.ok++;save();chime();speak(it[0],.7);toneRender()}
+      else{Q2.wrong.push(n);toneRender()}};
+    g.appendChild(b)});
+  c.appendChild(g);
+  const m=document.createElement("div");m.className="qmsg"+(Q2.done?" ok":"");
+  m.textContent=Q2.done?"✓ "+it[0]+"  "+it[2]+" = "+it[3]:(Q2.wrong.length?"Écoute encore 🎧 La voix reste en haut, monte, creuse puis remonte, ou tombe ?":"");
+  c.appendChild(m);
+  if(Q2.done){const r=document.createElement("div");r.className="brow";const nx=document.createElement("button");nx.textContent="Suivant ›";nx.onclick=()=>{Q2=null;toneRender()};r.appendChild(nx);c.appendChild(r)}
+  const sc=document.createElement("div");sc.className="qsc";sc.textContent="⭐ "+S.tn.ok+" / "+S.tn.tot;c.appendChild(sc);
+}
+function m2New(){const p=PR[rnd(PR.length)];M2={p:p,tg:rnd(2),order:shuf([0,1]),wrong:[],done:false};speak(p[M2.tg][0],.6)}
+function tnM(c){
+  if(!M2)m2New();
+  const p=M2.p;
+  const big=document.createElement("div");big.className="big";
+  big.innerHTML='<div style="font-size:54px">👂</div><div class="tr">Quel mot entends-tu ?</div><div class="row"><button class="sm" id="m2p">🔊</button><button class="sm" id="m2s">🐢</button></div>';
+  c.appendChild(big);
+  big.querySelector("#m2p").onclick=()=>speak(p[M2.tg][0],.7);big.querySelector("#m2s").onclick=()=>speak(p[M2.tg][0],.45);
+  M2.order.forEach(k=>{
+    const r=document.createElement("div");r.className="mrow";
+    const b=document.createElement("button");b.className="gopt";b.textContent=p[k][2];
+    if(M2.wrong.includes(k)){b.disabled=true;b.classList.add("dim")}
+    if(M2.done&&k===M2.tg)b.classList.add("good");
+    b.onclick=()=>{if(M2.done)return;
+      if(k===M2.tg){M2.done=true;S.tm.tot++;if(!M2.wrong.length)S.tm.ok++;save();chime();toneRender()}
+      else{M2.wrong.push(k);toneRender()}};
+    const h=document.createElement("button");h.className="sm";h.textContent="🔊";h.onclick=()=>speak(p[k][0],.6);
+    r.appendChild(b);r.appendChild(h);c.appendChild(r)});
+  const m=document.createElement("div");m.className="qmsg"+(M2.done?" ok":"");
+  m.textContent=M2.done?"✓ "+p[0][0]+" "+p[0][1]+" = "+p[0][2]+"  ·  "+p[1][0]+" "+p[1][1]+" = "+p[1][2]:(M2.wrong.length?"Compare avec 🔊 : lequel sonne comme le mot entendu ?":"");
+  c.appendChild(m);
+  if(M2.done){const r=document.createElement("div");r.className="brow";const nx=document.createElement("button");nx.textContent="Suivant ›";nx.onclick=()=>{M2=null;toneRender()};r.appendChild(nx);c.appendChild(r)}
+  const sc=document.createElement("div");sc.className="qsc";sc.textContent="⭐ "+S.tm.ok+" / "+S.tm.tot;c.appendChild(sc);
+}
+function tnS(c){
+  SND.forEach(x=>{
+    const d=document.createElement("div");d.className="sndc";
+    d.innerHTML='<div class="t"><div class="l"></div><div class="d"></div></div><div class="chips"></div>';
+    d.querySelector(".l").textContent=x[0];d.querySelector(".d").textContent=x[1];
+    x[2].forEach(e=>d.querySelector(".chips").appendChild(tChip(e)));c.appendChild(d)});
+}
+function tnR(c){
+  RL.forEach(x=>{
+    const d=document.createElement("div");d.className="sndc";
+    d.innerHTML='<div class="t"><div class="l" style="font-size:22px;min-width:96px"></div><div class="d"></div></div><div class="chips"></div>';
+    d.querySelector(".l").textContent=x[0];d.querySelector(".d").textContent=x[1];
+    x[2].forEach(e=>d.querySelector(".chips").appendChild(tChip(e)));c.appendChild(d)});
+}
 function tab(n){
-  [["vRead","tabR"],["vBuild","tabB"],["vQuiz","tabQ"],["vPair","tabP"]].forEach((x,i)=>{
+  [["vRead","tabR"],["vBuild","tabB"],["vQuiz","tabQ"],["vPair","tabP"],["vNames","tabN"],["vTrip","tabT"],["vTone","tabS"]].forEach((x,i)=>{
     $(x[0]).classList.toggle("hid",i!==n);$(x[1]).classList.toggle("on",i===n)});
+  try{$(["tabR","tabB","tabQ","tabP","tabN","tabT","tabS"][n]).scrollIntoView({inline:"center",block:"nearest"})}catch(e){}
   if(L.on)stopL();
   if(n===1)bRender();
   if(n===2&&!Q)qNew();
   if(n===3&&!P)pNew();
+  if(n===4)nRender();
+  if(n===5)tRender();
+  if(n===6)toneRender();
 }
-$("tabR").onclick=()=>tab(0);$("tabB").onclick=()=>tab(1);$("tabQ").onclick=()=>tab(2);$("tabP").onclick=()=>tab(3);
+$("tabR").onclick=()=>tab(0);$("tabB").onclick=()=>tab(1);$("tabQ").onclick=()=>tab(2);$("tabP").onclick=()=>tab(3);$("tabN").onclick=()=>tab(4);$("tabT").onclick=()=>tab(5);$("tabS").onclick=()=>tab(6);
 
 // ---------- Écoute en boucle + sons ----------
 let ov=null;
-function curIdx(){if(ov!==null)return ov;return ((dayNum(cur())%T.length)+T.length)%T.length}
+function curIdx(){if(ov!==null)return ov;const n=dayNum(cur())-dayNum(startDate());return ((n%T.length)+T.length)%T.length}
 const L={on:false,tok:0,slow:true,fr:false,all:false,wl:null};
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
 function sp(txt,lang,rate){return new Promise(res=>{
