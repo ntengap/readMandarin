@@ -1,5 +1,5 @@
 // Moteur partagé — le contenu et les textes sont dans lang-fr.js / lang-en.js
-const TPL="\n<header>\n  <div class=\"streak\" id=\"streak\">{{0}}</div>\n  <button class=\"inst hid\" id=\"inst\">{{1}}</button>\n  <div class=\"nav\"><button class=\"ic\" id=\"prev\">{{2}}</button><button id=\"pos\" class=\"posb\"></button><button class=\"ic\" id=\"next\">{{3}}</button></div>\n</header>\n<div class=\"tabs t4\" id=\"mainTabs\"><button id=\"tabR\" class=\"on\">{{4}}</button><button id=\"tabB\">{{5}}</button><button id=\"tabQ\">{{6}}</button><button id=\"tabP\">{{7}}</button><button id=\"tabN\">{{8}}</button><button id=\"tabT\">{{9}}</button><button id=\"tabS\">{{10}}</button><button id=\"tabA\">{{11}}</button></div>\n<div id=\"cal\" class=\"hid\"><div class=\"csheet\"><div class=\"chead\"><button id=\"cpv\">‹</button><span id=\"cmt\"></span><button id=\"cnx\">›</button><button id=\"calx\">{{13}}</button></div><div class=\"cg\" id=\"cg\"></div><div class=\"cinfo\" id=\"cinfo\"></div><button id=\"ctd\" class=\"ctd\"></button><div class=\"cleg\">{{14}}</div></div></div>\n<div id=\"vRead\">\n<h1 id=\"title\"></h1>\n<div class=\"date\" id=\"date\"></div>\n<main id=\"text\"></main>\n<div class=\"tip\" id=\"tip\"></div>\n<div class=\"tools\">\n  <button id=\"all\">{{15}}</button>\n  <button id=\"lis\">{{16}}</button>\n  <button id=\"tpy\" class=\"act\">{{17}}</button>\n  <button id=\"tfr\">{{18}}</button>\n</div>\n<div class=\"tools lo\"><button id=\"lslow\" class=\"act\">{{19}}</button><button id=\"lfr\">{{20}}</button><button id=\"lall\">{{21}}</button></div>\n<button class=\"done\" id=\"done\">{{22}}</button>\n<button class=\"nxt hid\" id=\"nxt\"></button>\n<div class=\"dots\" id=\"dots\"></div>\n</div>\n<div id=\"vBuild\" class=\"hid\">\n  <div class=\"big\"><div class=\"line\" id=\"bline\"></div><div class=\"tr\" id=\"btr\"></div><div class=\"emo\" id=\"bemo\"></div></div>\n  <div class=\"tabs t4\"><button id=\"mA\" class=\"on\">{{23}}</button><button id=\"mE\">{{24}}</button><button id=\"mC\">{{25}}</button><button id=\"nG\" class=\"tg\">{{26}}</button></div>\n  <div id=\"gS\"><div class=\"grp\"><b>{{27}}</b>{{28}}</div><div class=\"chips cs\" id=\"cS\"></div></div>\n  <div id=\"gV\"><div class=\"grp\"><b>{{29}}</b>{{30}}</div><div class=\"chips cv\" id=\"cV\"></div></div>\n  <div id=\"gO\"><div class=\"grp\"><b id=\"lOh\">{{31}}</b> <span id=\"lOt\">{{32}}</span></div><div class=\"chips co\" id=\"cO\"></div></div>\n  <div id=\"gN\" class=\"hid\"><div class=\"grp\"><b>{{33}}</b>{{34}}</div><div class=\"chips\" id=\"cN\"></div><div class=\"grp\"><b>{{35}}</b>{{36}}</div><div class=\"chips\" id=\"cT\"></div></div>\n  <div class=\"brow\"><button id=\"bsay\">{{37}}</button><button class=\"alt\" id=\"brnd\">{{38}}</button></div>\n</div>\n<div id=\"vQuiz\" class=\"hid\">\n  <div class=\"big\"><div class=\"tr\" id=\"qfr\" style=\"font-size:22px;color:var(--ink);margin:0\"></div></div>\n  <div class=\"ans\" id=\"qans\"></div>\n  <div class=\"chips\" id=\"qpool\" style=\"justify-content:center\"></div>\n  <div class=\"qmsg\" id=\"qmsg\"></div>\n  <div class=\"brow\"><button class=\"alt\" id=\"qreset\">{{39}}</button><button id=\"qnext\">{{40}}</button></div>\n  <div class=\"qsc\" id=\"qsc\"></div>\n</div>\n<div id=\"vPair\" class=\"hid\">\n  <div class=\"hint\">{{41}}</div>\n  <div class=\"big\"><div class=\"emo\" id=\"pemo\" style=\"font-size:64px;margin:0\"></div><div class=\"line\" id=\"pline\"></div><div class=\"tr\" id=\"pfr\"></div></div>\n  <div class=\"chips\" id=\"popts\" style=\"justify-content:center\"></div>\n  <div class=\"qmsg\" id=\"pmsg\"></div>\n  <div class=\"brow\"><button id=\"pnext\">{{42}}</button></div>\n  <div class=\"qsc\" id=\"psc\"></div>\n</div>\n<div id=\"vNames\" class=\"hid\">\n  <div class=\"hint\">{{43}}</div>\n  <div class=\"nsub\"><button id=\"nsv\" class=\"on\">{{44}}</button><button id=\"nse\">{{45}}</button><button id=\"nsp\">{{46}}</button></div>\n  <div id=\"nlist\"></div>\n</div>\n<div id=\"vTrip\" class=\"hid\">\n  <div class=\"hint\">{{47}}</div>\n  <div class=\"tgs\" id=\"tgs\"></div>\n  <div class=\"tools\" style=\"margin:0 0 10px\"><button id=\"tg\">{{48}}</button><button id=\"td\">{{49}}</button></div>\n  <div id=\"tlist\"></div>\n  <div id=\"tgame\" class=\"hid\">\n    <div class=\"big\"><div style=\"font-size:54px\">{{50}}</div><div class=\"tr\">{{51}}</div>\n      <div class=\"row\"><button class=\"sm\" id=\"gplay\">{{52}}</button><button class=\"sm\" id=\"gslow\">{{53}}</button></div></div>\n    <div id=\"gopts\"></div>\n    <div class=\"qmsg\" id=\"gmsg\"></div>\n    <div class=\"brow\"><button id=\"gnext\">{{54}}</button></div>\n    <div class=\"qsc\" id=\"gsc\"></div>\n  </div>\n  <div id=\"tdlg\" class=\"hid\"></div>\n</div>\n<div id=\"vTone\" class=\"hid\">\n  <div class=\"tgs\" id=\"ttabs\"></div>\n  <div id=\"tcont\"></div>\n</div>\n<div id=\"vTpr\" class=\"hid\">\n  <div class=\"hint\">{{55}}</div>\n  <div class=\"tgs\" id=\"tptabs\"></div>\n  <div id=\"tpcont\"></div>\n</div>\n\n<div style=\"text-align:center;margin:18px 0 6px;font-size:13px\"><a href=\"index.html?choose=1\" style=\"color:#8a7564\">🌐 Langue / Language</a></div>";
+const TPL="\n<header>\n  <div class=\"streak\" id=\"streak\">{{0}}</div>\n  <button class=\"inst hid\" id=\"inst\">{{1}}</button>\n  <div class=\"nav\"><button class=\"ic\" id=\"prev\">{{2}}</button><button id=\"pos\" class=\"posb\"></button><button class=\"ic\" id=\"next\">{{3}}</button></div>\n</header>\n<div class=\"hbar hid\" id=\"hbar\"><button id=\"hback\"></button><span id=\"hname\"></span></div>\n<div id=\"vHome\" class=\"hid\"></div>\n<div class=\"tabs t4 hid\" id=\"mainTabs\"><button id=\"tabR\" class=\"on\">{{4}}</button><button id=\"tabB\">{{5}}</button><button id=\"tabQ\">{{6}}</button><button id=\"tabP\">{{7}}</button><button id=\"tabN\">{{8}}</button><button id=\"tabT\">{{9}}</button><button id=\"tabS\">{{10}}</button><button id=\"tabA\">{{11}}</button></div>\n<div id=\"cal\" class=\"hid\"><div class=\"csheet\"><div class=\"chead\"><button id=\"cpv\">‹</button><span id=\"cmt\"></span><button id=\"cnx\">›</button><button id=\"calx\">{{13}}</button></div><div class=\"cg\" id=\"cg\"></div><div class=\"cinfo\" id=\"cinfo\"></div><button id=\"ctd\" class=\"ctd\"></button><div class=\"cleg\">{{14}}</div></div></div>\n<div id=\"vRead\">\n<h1 id=\"title\"></h1>\n<div class=\"date\" id=\"date\"></div>\n<main id=\"text\"></main>\n<div class=\"tip\" id=\"tip\"></div>\n<div class=\"tools\">\n  <button id=\"all\">{{15}}</button>\n  <button id=\"lis\">{{16}}</button>\n  <button id=\"tpy\" class=\"act\">{{17}}</button>\n  <button id=\"tfr\">{{18}}</button>\n</div>\n<div class=\"tools lo\"><button id=\"lslow\" class=\"act\">{{19}}</button><button id=\"lfr\">{{20}}</button><button id=\"lall\">{{21}}</button></div>\n<button class=\"done\" id=\"done\">{{22}}</button>\n<button class=\"nxt hid\" id=\"nxt\"></button>\n<div class=\"dots\" id=\"dots\"></div>\n</div>\n<div id=\"vBuild\" class=\"hid\">\n  <div class=\"big\"><div class=\"line\" id=\"bline\"></div><div class=\"tr\" id=\"btr\"></div><div class=\"emo\" id=\"bemo\"></div></div>\n  <div class=\"tabs t4\"><button id=\"mA\" class=\"on\">{{23}}</button><button id=\"mE\">{{24}}</button><button id=\"mC\">{{25}}</button><button id=\"nG\" class=\"tg\">{{26}}</button></div>\n  <div id=\"gS\"><div class=\"grp\"><b>{{27}}</b>{{28}}</div><div class=\"chips cs\" id=\"cS\"></div></div>\n  <div id=\"gV\"><div class=\"grp\"><b>{{29}}</b>{{30}}</div><div class=\"chips cv\" id=\"cV\"></div></div>\n  <div id=\"gO\"><div class=\"grp\"><b id=\"lOh\">{{31}}</b> <span id=\"lOt\">{{32}}</span></div><div class=\"chips co\" id=\"cO\"></div></div>\n  <div id=\"gN\" class=\"hid\"><div class=\"grp\"><b>{{33}}</b>{{34}}</div><div class=\"chips\" id=\"cN\"></div><div class=\"grp\"><b>{{35}}</b>{{36}}</div><div class=\"chips\" id=\"cT\"></div></div>\n  <div class=\"brow\"><button id=\"bsay\">{{37}}</button><button class=\"alt\" id=\"brnd\">{{38}}</button></div>\n</div>\n<div id=\"vQuiz\" class=\"hid\">\n  <div class=\"big\"><div class=\"tr\" id=\"qfr\" style=\"font-size:22px;color:var(--ink);margin:0\"></div></div>\n  <div class=\"ans\" id=\"qans\"></div>\n  <div class=\"chips\" id=\"qpool\" style=\"justify-content:center\"></div>\n  <div class=\"qmsg\" id=\"qmsg\"></div>\n  <div class=\"brow\"><button class=\"alt\" id=\"qreset\">{{39}}</button><button id=\"qnext\">{{40}}</button></div>\n  <div class=\"qsc\" id=\"qsc\"></div>\n</div>\n<div id=\"vPair\" class=\"hid\">\n  <div class=\"hint\">{{41}}</div>\n  <div class=\"big\"><div class=\"emo\" id=\"pemo\" style=\"font-size:64px;margin:0\"></div><div class=\"line\" id=\"pline\"></div><div class=\"tr\" id=\"pfr\"></div></div>\n  <div class=\"chips\" id=\"popts\" style=\"justify-content:center\"></div>\n  <div class=\"qmsg\" id=\"pmsg\"></div>\n  <div class=\"brow\"><button id=\"pnext\">{{42}}</button></div>\n  <div class=\"qsc\" id=\"psc\"></div>\n</div>\n<div id=\"vNames\" class=\"hid\">\n  <div class=\"hint\">{{43}}</div>\n  <div class=\"nsub\"><button id=\"nsv\" class=\"on\">{{44}}</button><button id=\"nse\">{{45}}</button><button id=\"nsp\">{{46}}</button></div>\n  <div id=\"nlist\"></div>\n</div>\n<div id=\"vTrip\" class=\"hid\">\n  <div class=\"hint\">{{47}}</div>\n  <div class=\"tgs\" id=\"tgs\"></div>\n  <div class=\"tools\" style=\"margin:0 0 10px\"><button id=\"tg\">{{48}}</button><button id=\"td\">{{49}}</button></div>\n  <div id=\"tlist\"></div>\n  <div id=\"tgame\" class=\"hid\">\n    <div class=\"big\"><div style=\"font-size:54px\">{{50}}</div><div class=\"tr\">{{51}}</div>\n      <div class=\"row\"><button class=\"sm\" id=\"gplay\">{{52}}</button><button class=\"sm\" id=\"gslow\">{{53}}</button></div></div>\n    <div id=\"gopts\"></div>\n    <div class=\"qmsg\" id=\"gmsg\"></div>\n    <div class=\"brow\"><button id=\"gnext\">{{54}}</button></div>\n    <div class=\"qsc\" id=\"gsc\"></div>\n  </div>\n  <div id=\"tdlg\" class=\"hid\"></div>\n</div>\n<div id=\"vTone\" class=\"hid\">\n  <div class=\"tgs\" id=\"ttabs\"></div>\n  <div id=\"tcont\"></div>\n</div>\n<div id=\"vTpr\" class=\"hid\">\n  <div class=\"hint\">{{55}}</div>\n  <div class=\"tgs\" id=\"tptabs\"></div>\n  <div id=\"tpcont\"></div>\n</div>\n\n<div style=\"text-align:center;margin:18px 0 6px;font-size:13px\"><a href=\"index.html?choose=1\" style=\"color:#8a7564\">🌐 Langue / Language</a></div>";
 document.body.insertAdjacentHTML("afterbegin",TPL.replace(/\{\{(\d+)\}\}/g,(m,k)=>UI[k]));
 try{localStorage.setItem("lm-lang",LANG)}catch(e){}
 
@@ -639,10 +639,53 @@ async function tpAutoRun(){
     S.tp.n++;save();
   }
 }
-function tab(n){
-  [["vRead","tabR"],["vBuild","tabB"],["vQuiz","tabQ"],["vPair","tabP"],["vNames","tabN"],["vTrip","tabT"],["vTone","tabS"],["vTpr","tabA"]].forEach((x,i)=>{
-    $(x[0]).classList.toggle("hid",i!==n);$(x[1]).classList.toggle("on",i===n)});
-  try{$(["tabR","tabB","tabQ","tabP","tabN","tabT","tabS","tabA"][n]).scrollIntoView({inline:"center",block:"nearest"})}catch(e){}
+const HX=LANG==="fr"
+ ?{back:"‹ Accueil",title:"Que veux-tu faire ?",today:"Texte du jour",read:"✓ Lu aujourd'hui",unread:"À lire maintenant ›",
+   sub:["","Construis des phrases","Remets la phrase en ordre","Classificateurs","Villes, marques, célébrités","Phrases et dialogues","Prononciation","Bouge en chinois"],
+   prog:["",null,n=>"⭐ "+n,n=>"⭐ "+n,null,n=>"💬 "+n+"/"+DL.length,n=>"⭐ "+n,n=>"✋ "+n]}
+ :{back:"‹ Home",title:"What do you want to do?",today:"Today's text",read:"✓ Read today",unread:"Read now ›",
+   sub:["","Build sentences","Put the sentence in order","Classifiers","Cities, brands, famous people","Phrases and dialogues","Pronunciation","Move in Chinese"],
+   prog:["",null,n=>"⭐ "+n,n=>"⭐ "+n,null,n=>"💬 "+n+"/"+DL.length,n=>"⭐ "+n,n=>"✋ "+n]};
+const VIEWS=[["vRead","tabR"],["vBuild","tabB"],["vQuiz","tabQ"],["vPair","tabP"],["vNames","tabN"],["vTrip","tabT"],["vTone","tabS"],["vTpr","tabA"]];
+const GOAL=[0,0,30,20,0,DL.length,40,60];
+function homeStat(n){
+  if(n===2)return[S.q.ok,GOAL[2]];if(n===3)return[S.p.ok,GOAL[3]];
+  if(n===5)return[Object.keys(S.d.done).length,GOAL[5]];
+  if(n===6)return[S.tn.ok+S.tm.ok,GOAL[6]];if(n===7)return[S.tp.n,GOAL[7]];return null}
+function home(push){
+  VIEWS.forEach(x=>$(x[0]).classList.add("hid"));$("vHome").classList.remove("hid");
+  $("hbar").classList.add("hid");document.querySelector(".nav").style.visibility="hidden";
+  if(L.on)stopL();if(tpA.on||tpTm)tpStop();
+  const h=$("vHome");h.innerHTML="";
+  const t=document.createElement("div");t.className="htitle";t.textContent=HX.title;h.appendChild(t);
+  const k=dayKey(new Date(today)),dn=!!S.done[k],i=curIdxAt(0);
+  const hero=document.createElement("button");hero.className="hero"+(dn?" ok":"");
+  hero.innerHTML='<div class="h1"></div><div class="h2"></div><div class="h3"></div><div class="pb"><i></i></div>';
+  hero.querySelector(".h1").textContent=$("tabR").textContent.split(" ")[0]+" "+HX.today;
+  hero.querySelector(".h2").textContent=T[i].t;
+  hero.querySelector(".h3").textContent=dn?HX.read:HX.unread;
+  const nd=Object.keys(S.done).length;hero.querySelector("i").style.width=Math.min(100,Math.round(nd/T.length*100))+"%";
+  hero.onclick=()=>{off=0;ov=null;render();tab(0,true)};h.appendChild(hero);
+  const g=document.createElement("div");g.className="hgrid";
+  for(let n=1;n<8;n++){
+    const b=document.createElement("button");b.className="hcard";
+    const lab=$(VIEWS[n][1]).textContent,sp=lab.indexOf(" ");
+    b.innerHTML='<div class="hz"></div><div class="hn"></div><div class="hs"></div><div class="pb"><i></i></div>';
+    b.querySelector(".hz").textContent=lab.slice(0,sp);b.querySelector(".hn").textContent=lab.slice(sp+1);
+    const st=homeStat(n);let sub=HX.sub[n];
+    if(st&&st[0]>0&&HX.prog[n])sub=HX.prog[n](st[0])+" · "+sub;
+    b.querySelector(".hs").textContent=sub;
+    const pb=b.querySelector(".pb");if(st)b.querySelector("i").style.width=Math.min(100,Math.round(st[0]/st[1]*100))+"%";else pb.style.visibility="hidden";
+    b.onclick=()=>tab(n,true);g.appendChild(b)}
+  h.appendChild(g);
+  window.scrollTo(0,0);
+}
+function tab(n,push){
+  VIEWS.forEach((x,i)=>{$(x[0]).classList.toggle("hid",i!==n);$(x[1]).classList.toggle("on",i===n)});
+  $("vHome").classList.add("hid");
+  $("hbar").classList.remove("hid");$("hback").textContent=HX.back;$("hname").textContent=$(VIEWS[n][1]).textContent;
+  document.querySelector(".nav").style.visibility=n===0?"visible":"hidden";
+  if(push){try{history.pushState({m:n},"")}catch(e){}}
   if(L.on)stopL();
   if(tpA.on||tpTm)tpStop();
   if(n===1)bRender();
@@ -652,8 +695,11 @@ function tab(n){
   if(n===5)tRender();
   if(n===6)toneRender();
   if(n===7)tprRender();
+  window.scrollTo(0,0);
 }
-$("tabR").onclick=()=>tab(0);$("tabB").onclick=()=>tab(1);$("tabQ").onclick=()=>tab(2);$("tabP").onclick=()=>tab(3);$("tabN").onclick=()=>tab(4);$("tabT").onclick=()=>tab(5);$("tabS").onclick=()=>tab(6);$("tabA").onclick=()=>tab(7);
+$("hback").onclick=()=>{if(history.state&&history.state.m!==undefined){history.back()}else home()};
+window.addEventListener("popstate",()=>home());
+
 
 // ---------- Écoute en boucle + sons ----------
 let ov=null;
@@ -733,5 +779,5 @@ $("inst").onclick=async()=>{
 };
 instShow();
 if(window.speechSynthesis)speechSynthesis.onvoiceschanged=()=>{};
-render();
+render();home();
 if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
